@@ -1,0 +1,46 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+# Local .env files
+.env.local
+.env.*.local
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Outputs
+*.pyc
+manifest.json
+.credstash.json
+.npmrc
+.yarnrc
+dist
+.serverless
+.webpack
+.env
+coverage
+
+# Temp dir
+tmp
+/local-env
+
+coverage/
+
+# Dockerfile is ignored because it's generated as part of deploys
+Dockerfile

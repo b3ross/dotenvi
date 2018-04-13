@@ -1,0 +1,20 @@
+{
+  "name": "envi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ben Ross <bross@indigoag.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/argparse": "^1.0.33",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/js-yaml": "^3.11.1",
+    "@types/node": "^9.6.4",
+    "argparse": "^1.0.10",
+    "aws-sdk": "^2.224.1",
+    "js-yaml": "^3.11.0",
+    "typescript": "^2.8.1"
+  },
+  "devDependencies": {
+    "ts-node": "^5.0.1"
+  }
+}
