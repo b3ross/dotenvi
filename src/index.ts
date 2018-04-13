@@ -47,6 +47,15 @@ parser.addArgument(['file'], {
 });
 const args = parser.parseArgs();
 
+function writeFile(document: { [name: string]: string }) {
+  let output = '';
+  const variables = Object.keys(document);
+  for (const variable of variables) {
+    output += `${variable}=${document[variable]}\n`;
+  }
+  fs.writeFileSync('.env', output);
+}
+
 
 try {
   // TODO Load external resolvers
@@ -60,7 +69,7 @@ try {
   }
   const parser = new Parser(resolvers);
   parser.parse(document).then(result => {
-    console.info(JSON.stringify(result, undefined, 2));
+    writeFile(result);
   });
 } catch (e) {
   console.error(`Could not load yaml ${e}`);
