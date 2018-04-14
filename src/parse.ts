@@ -29,7 +29,7 @@ export class Parser {
 
   private getResolver(name: string) {
     if (!name) {
-      return this.resolvers['const'];
+      return this.resolvers['constant'];
     }
     return this.resolvers[name];
   }

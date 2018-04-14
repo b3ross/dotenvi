@@ -32,7 +32,7 @@ const resolvers: ResolverMap = {
   env: async (argument: string) => {
     return process.env[argument];
   },
-  const: async (argument: string) => {
+  constant: async (argument: string) => {
     return argument;
   }
 }
