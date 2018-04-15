@@ -4,7 +4,7 @@
   "author": "Ben Ross <bcr@alum.mit.edu>",
   "license": "MIT",
   "scripts": {
-    "release": "semantic-release pre && npm publish && semantic-release post"
+    "release": "semantic-release && npm publish"
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
