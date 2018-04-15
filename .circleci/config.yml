@@ -8,6 +8,6 @@ jobs:
       - run:
           name: Download dependencies
           command: yarn
-      - run:
-          name: Release
-          command: yarn release
+#      - run:
+#          name: Release
+#          command: yarn release
