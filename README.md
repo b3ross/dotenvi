@@ -1,10 +1,12 @@
 # dotenvi
-A simple library for generating dotenv files
+A library for generating dotenv files
 
 ## Motivation
-Dotenv is a library for adding configuration to your node application.  With simplicity, however, comes drawbacks.  Dotenvi is a library for attempting to address those drawbacks.
+The library `dotenv` is a simple, convenient mechanism to add configuration to your node application.  With simplicity, however, comes drawbacks.  Dotenvi (pronounced "dotenvee") attempts to address those drawbacks.
 
-Dotenvi defines all configuration at the root of your package in a yaml file called `env.yml`.  References to other variable definitions are done in a format inspired by [serverless](https://github.com/serverless/serverless).
+Dotenvi defines all configuration at the root of your package in a yaml file called `env.yml`.
+
+Use dotenvi as an initial step in your CI processes to lay down the configuration for your application, or to ready an application for deployment to a particular stage.
 
 ## Installation
 
@@ -33,21 +35,24 @@ production:
   <<: *default_env
 ```
 
-Then, simply run `yarn dotenvi` to generate a `.env` file.  Use this `.env` file in your normal processes using `dotenv`.  Use `yarn dotenvi` as an initial step in your CI processes to lay down the configuration for your application, or to ready an application for deployment.
+Then, run `yarn dotenvi -s <stage>` to generate a `.env` file for the stage desired (e.g., development, staging, production, etc...).  Use the generated `.env` file in your normal processes using [dotenv](https://github.com/motdotla/dotenv). 
+
+Note that stages are not required in your yaml file - you can also define it without stages, in which case you should not specify a stage with the `-s` option when you run `dotenvi`.
 
 
 ## Discussion
 
 The main design goals of dotenvi are as follows:
 
-1. Document all configuration in a consistent and easy to find way.
+1. Document ALL configuration for a project in a consistent and easy to find way.
 2. Allow for environment variable generation from outside sources (such as AWS CFT outputs or other environment variables).
 3. Allow for different "environments" or "stages".
-4. Play nicely with dotenv.
 
-## Note
+## Additional Notes
 
 I don't prescribe to the 12-factor application strategy that dotenv is based around, so please understand that this library may not completely follow that strategy.
+
+The reference syntax used in `env.yml` is inspired by [serverless](https://github.com/serverless/serverless).
 
 ## Possible Future Work
 

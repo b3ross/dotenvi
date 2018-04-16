@@ -45,9 +45,6 @@ parser.addArgument(['-s', '--stage'], {
   help: 'Environment stage',
   dest: 'stage'
 });
-parser.addArgument(['file'], {
-  help: 'env.yml file'
-});
 const args = parser.parseArgs();
 
 function writeFile(document: { [name: string]: string }) {
@@ -62,7 +59,7 @@ function writeFile(document: { [name: string]: string }) {
 try {
   // TODO Load external resolvers
 
-  let document = yaml.safeLoad(fs.readFileSync(args.file, 'utf8'));
+  let document = yaml.safeLoad(fs.readFileSync('./env.yml', 'utf8'));
   if (args.stage) {
     document = (document as any)[args.stage];
     if (!document) {
