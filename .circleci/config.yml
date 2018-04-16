@@ -28,7 +28,7 @@ jobs:
           key: repo-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Release
-          command: yarn release --dry-run
+          command: yarn release
 
 workflows:
   version: 2
