@@ -8,7 +8,7 @@ export class Parser {
     const result = {};
     for (const variable of variables) {
       const value = document[variable];
-      result[variable] = await this.parseValue(value);
+      (result as any)[variable] = await this.parseValue(value);
     }
     return result;
   }

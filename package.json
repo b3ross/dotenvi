@@ -1,10 +1,18 @@
 {
   "name": "dotenvi",
   "version": "0.0.0-development",
-  "author": "Ben Ross <bcr@alum.mit.edu>",
+  "author": "Ben Ross",
   "license": "MIT",
+  "homepage": "https://github.com/b3ross/dotenvi#readme",
+  "bugs": {
+    "url": "https://github.com/b3ross/dotenvi/issues"
+  },
   "scripts": {
+    "precommit": "lint-staged",
     "release": "semantic-release"
+  },
+  "bin": {
+    "dotenvi": "dist/index.js"
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
@@ -17,6 +25,8 @@
     "typescript": "^2.8.1"
   },
   "devDependencies": {
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.0",
     "semantic-release": "^15.1.7",
     "semantic-release-cli": "^3.6.6",
     "ts-node": "^5.0.1"
@@ -24,5 +34,21 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/b3ross/dotenvi.git"
+  },
+  "keywords": [
+    "dotenv",
+    "yaml",
+    "config",
+    "environment"
+  ],
+  "lint-staged": {
+    "*.{ts,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
   }
 }

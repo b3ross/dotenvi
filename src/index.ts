@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 
 import * as yaml from 'js-yaml';
 import * as fs from 'fs';
@@ -20,7 +21,9 @@ const resolvers: ResolverMap = {
     try {
       stack = await cft.describeStacks({ StackName: parsedArgument[0] }).promise();
     } catch (e) {
-      throw new Error(`Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`);
+      throw new Error(
+        `Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`
+      );
     }
     for (const output of stack.Stacks[0].Outputs) {
       if (output.OutputKey === parsedArgument[1]) {
@@ -35,15 +38,12 @@ const resolvers: ResolverMap = {
   constant: async (argument: string) => {
     return argument;
   }
-}
+};
 
 const parser = new ArgumentParser();
 parser.addArgument(['-s', '--stage'], {
   help: 'Environment stage',
   dest: 'stage'
-});
-parser.addArgument(['file'], {
-  help: 'env.yml file'
 });
 const args = parser.parseArgs();
 
@@ -56,13 +56,12 @@ function writeFile(document: { [name: string]: string }) {
   fs.writeFileSync('.env', output);
 }
 
-
 try {
   // TODO Load external resolvers
 
-  let document = yaml.safeLoad(fs.readFileSync(args.file, 'utf8'));
+  let document = yaml.safeLoad(fs.readFileSync('./env.yml', 'utf8'));
   if (args.stage) {
-    document = document[args.stage];
+    document = (document as any)[args.stage];
     if (!document) {
       throw new Error(`Could not locate stage ${args.stage} in file ${args.file}`);
     }
