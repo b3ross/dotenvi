@@ -22,10 +22,8 @@ workflows:
   version: 2
   build_and_release:
     jobs:
-      - build:
-          context: org-global
+      - build
       - release:
-          context: org-global
           requires:
             - build
           filters:
