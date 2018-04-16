@@ -1,4 +1,19 @@
 version: 2
+workflows:
+  version: 2
+  build_and_release:
+    jobs:
+      - build:
+          context: org-global
+      - release:
+          context: org-global
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master 
+
 jobs:
   build:
     docker:
@@ -18,17 +33,3 @@ jobs:
            name: Release
            command: yarn release
 
-workflows:
-  version: 2
-  build_and_release:
-    jobs:
-      - build:
-          context: org-global
-      - release:
-          context: org-global
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - master 
