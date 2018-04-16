@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build_and_test:
+  build:
     docker:
       - image: 'circleci/node:8.10'
     steps:
@@ -12,22 +12,22 @@ jobs:
           name: Test
           command: echo done!
 
- release:
-   steps:
-     - run:
-         name: Release
-         command: yarn release
+  release:
+    steps:
+      - run:
+          name: Release
+          command: yarn release
 
 workflows:
   version: 2
   build_and_release:
     jobs:
-      - build_and_test:
+      - build:
           context: org-global
       - release:
           context: org-global
           requires:
-            - build_and_test
+            - build
           filters:
             branches:
               only:
