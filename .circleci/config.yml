@@ -13,7 +13,7 @@ jobs:
           command: echo done!
       - save_cache:
           key: repo-{{ .Environment.CIRCLE_SHA1 }}
-          paths: ~/circleci
+          paths: ~/project
 
 
   release:
