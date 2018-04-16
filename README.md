@@ -6,7 +6,7 @@ The library `dotenv` is a simple, convenient mechanism to add configuration to y
 
 Dotenvi defines all configuration at the root of your package in a yaml file called `env.yml`.
 
-Use dotenvi as an initial step in your CI processes to lay down the configuration for your application, or to ready an application for deployment to a particular stage.
+Use dotenvi to generate a .env file that plays nicely with dotenv without having to hack on top of dotenv to get it to support your needs.
 
 ## Installation
 
