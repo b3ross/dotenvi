@@ -11,11 +11,18 @@ jobs:
       - run:
           name: Test
           command: echo done!
+      - save_cache:
+          key: repo-{{ .Environment.CIRCLE_SHA1 }}
+          paths: ~/circleci
+
 
   release:
     docker:
       - image: 'circleci/node:8.10'
     steps:
+      - restore_cache:
+          name: Restore workspace cache
+          key: repo-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Release
           command: yarn release
