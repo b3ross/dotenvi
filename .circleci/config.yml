@@ -9,6 +9,9 @@ jobs:
           name: Download dependencies
           command: yarn
       - run:
+          name: Build
+          command: yarn tsc
+      - run:
           name: Test
           command: echo done!
       - save_cache:
