@@ -9,5 +9,27 @@ jobs:
           name: Download dependencies
           command: yarn
       - run:
+          name: Test
+          command: echo done!
+
+  release:
+    docker:
+      - image: 'circleci/node:8.10'
+    steps:
+      - run:
           name: Release
           command: yarn release
+
+workflows:
+  version: 2
+  build_and_release:
+    jobs:
+      - build
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master 
+
