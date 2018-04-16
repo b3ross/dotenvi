@@ -22,11 +22,11 @@ workflows:
   version: 2
   build_and_release:
     jobs:
+    - build
+    - release:
+      requires:
       - build
-      - release:
-        requires:
-        - build
-        filters:
-          branches:
-            only:
-            - master 
+      filters:
+        branches:
+          only:
+          - master 
