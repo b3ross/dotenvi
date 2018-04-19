@@ -8,6 +8,7 @@
     "url": "https://github.com/b3ross/dotenvi/issues"
   },
   "scripts": {
+    "build": "yarn tsc",
     "precommit": "lint-staged",
     "release": "semantic-release"
   },
