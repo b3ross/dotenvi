@@ -20,6 +20,11 @@ export const resolvers: ResolverMap = {
         `Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`
       );
     }
+    if (stack.Stacks.length == 0) {
+      throw new Error(
+        `Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
+    }
+
     for (const output of stack.Stacks[0].Outputs) {
       if (output.OutputKey === parsedArgument[1]) {
         return output.OutputValue;

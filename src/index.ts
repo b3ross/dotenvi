@@ -36,6 +36,7 @@ try {
   }
   const rewriter = new Rewriter(resolvers);
   rewriter.rewrite(document).then(result => {
+    console.info(`Writing .env file to ${process.cwd()}/.env`);
     writeFile(result);
   });
 } catch (e) {

@@ -9,11 +9,25 @@
   },
   "scripts": {
     "build": "yarn tsc",
+    "test": "yarn jest",
     "precommit": "lint-staged",
     "release": "semantic-release"
   },
   "bin": {
     "dotenvi": "dist/index.js"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
@@ -26,10 +40,12 @@
     "typescript": "^2.8.1"
   },
   "devDependencies": {
+    "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
     "prettier": "^1.12.0",
     "semantic-release": "^15.1.7",
     "semantic-release-cli": "^3.6.6",
+    "ts-jest": "^22.4.4",
     "ts-node": "^5.0.1"
   },
   "repository": {
