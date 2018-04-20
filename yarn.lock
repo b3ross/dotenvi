@@ -161,7 +161,7 @@ aggregate-error@^1.0.0:
 
 ajv@^4.9.1:
   version "4.11.8"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/ajv/-/ajv-4.11.8.tgz?dl=https://registry.npmjs.org/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -237,14 +237,14 @@ any-observable@^0.2.0:
 
 anymatch@^1.3.0:
   version "1.3.2"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/anymatch/-/anymatch-1.3.2.tgz?dl=https://registry.npmjs.org/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
+  resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
   dependencies:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
 anymatch@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/anymatch/-/anymatch-2.0.0.tgz?dl=https://registry.npmjs.org/anymatch/-/anymatch-2.0.0.tgz#bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb"
+  resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-2.0.0.tgz#bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb"
   dependencies:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
@@ -255,7 +255,7 @@ app-root-path@^2.0.1:
 
 append-transform@^0.4.0:
   version "0.4.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/append-transform/-/append-transform-0.4.0.tgz?dl=https://registry.npmjs.org/append-transform/-/append-transform-0.4.0.tgz#d76ebf8ca94d276e247a36bad44a4b74ab611991"
+  resolved "https://registry.yarnpkg.com/append-transform/-/append-transform-0.4.0.tgz#d76ebf8ca94d276e247a36bad44a4b74ab611991"
   dependencies:
     default-require-extensions "^1.0.0"
 
@@ -312,7 +312,7 @@ array-equal@^1.0.0:
 
 array-filter@~0.0.0:
   version "0.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/array-filter/-/array-filter-0.0.1.tgz?dl=https://registry.npmjs.org/array-filter/-/array-filter-0.0.1.tgz#7da8cf2e26628ed732803581fd21f67cacd2eeec"
+  resolved "https://registry.yarnpkg.com/array-filter/-/array-filter-0.0.1.tgz#7da8cf2e26628ed732803581fd21f67cacd2eeec"
 
 array-find-index@^1.0.1:
   version "1.0.2"
@@ -324,11 +324,11 @@ array-ify@^1.0.0:
 
 array-map@~0.0.0:
   version "0.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/array-map/-/array-map-0.0.0.tgz?dl=https://registry.npmjs.org/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
+  resolved "https://registry.yarnpkg.com/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
 
 array-reduce@~0.0.0:
   version "0.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/array-reduce/-/array-reduce-0.0.0.tgz?dl=https://registry.npmjs.org/array-reduce/-/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
+  resolved "https://registry.yarnpkg.com/array-reduce/-/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -374,11 +374,11 @@ assign-symbols@^1.0.0:
 
 astral-regex@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/astral-regex/-/astral-regex-1.0.0.tgz?dl=https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
+  resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
 
 async-each@^1.0.0:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/async-each/-/async-each-1.0.1.tgz?dl=https://registry.npmjs.org/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
+  resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
 async-limiter@~1.0.0:
   version "1.0.0"
@@ -577,7 +577,7 @@ babel-helpers@^6.24.1:
 
 babel-jest@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/babel-jest/-/babel-jest-22.4.3.tgz?dl=https://registry.npmjs.org/babel-jest/-/babel-jest-22.4.3.tgz#4b7a0b6041691bbd422ab49b3b73654a49a6627a"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.4.3.tgz#4b7a0b6041691bbd422ab49b3b73654a49a6627a"
   dependencies:
     babel-plugin-istanbul "^4.1.5"
     babel-preset-jest "^22.4.3"
@@ -596,7 +596,7 @@ babel-plugin-check-es2015-constants@^6.22.0:
 
 babel-plugin-istanbul@^4.1.4, babel-plugin-istanbul@^4.1.5:
   version "4.1.6"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/babel-plugin-istanbul/-/babel-plugin-istanbul-4.1.6.tgz?dl=https://registry.npmjs.org/babel-plugin-istanbul/-/babel-plugin-istanbul-4.1.6.tgz#36c59b2192efce81c5b378321b74175add1c9a45"
+  resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-4.1.6.tgz#36c59b2192efce81c5b378321b74175add1c9a45"
   dependencies:
     babel-plugin-syntax-object-rest-spread "^6.13.0"
     find-up "^2.1.0"
@@ -605,7 +605,7 @@ babel-plugin-istanbul@^4.1.4, babel-plugin-istanbul@^4.1.5:
 
 babel-plugin-jest-hoist@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz?dl=https://registry.npmjs.org/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -617,7 +617,7 @@ babel-plugin-syntax-exponentiation-operator@^6.8.0:
 
 babel-plugin-syntax-object-rest-spread@^6.13.0:
   version "6.13.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz?dl=https://registry.npmjs.org/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
 
 babel-plugin-syntax-trailing-function-commas@^6.22.0:
   version "6.22.0"
@@ -865,7 +865,7 @@ babel-preset-env@^1.6.1:
 
 babel-preset-jest@^22.4.0, babel-preset-jest@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz?dl=https://registry.npmjs.org/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz#e92eef9813b7026ab4ca675799f37419b5a44156"
+  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz#e92eef9813b7026ab4ca675799f37419b5a44156"
   dependencies:
     babel-plugin-jest-hoist "^22.4.3"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
@@ -974,7 +974,7 @@ bin-links@^1.1.0:
 
 binary-extensions@^1.0.0:
   version "1.11.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/binary-extensions/-/binary-extensions-1.11.0.tgz?dl=https://registry.npmjs.org/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
+  resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
 bl@^1.0.0:
   version "1.2.2"
@@ -1082,7 +1082,7 @@ browserslist@^2.1.2:
 
 bser@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/bser/-/bser-2.0.0.tgz?dl=https://registry.npmjs.org/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
+  resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
   dependencies:
     node-int64 "^0.4.0"
 
@@ -1228,7 +1228,7 @@ chardet@^0.4.0:
 
 chokidar@^1.6.0:
   version "1.7.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/chokidar/-/chokidar-1.7.0.tgz?dl=https://registry.npmjs.org/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
   dependencies:
     anymatch "^1.3.0"
     async-each "^1.0.0"
@@ -1405,7 +1405,7 @@ compare-func@^1.3.1:
 
 compare-versions@^3.1.0:
   version "3.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/compare-versions/-/compare-versions-3.1.0.tgz?dl=https://registry.npmjs.org/compare-versions/-/compare-versions-3.1.0.tgz#43310256a5c555aaed4193c04d8f154cf9c6efd5"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.1.0.tgz#43310256a5c555aaed4193c04d8f154cf9c6efd5"
 
 component-emitter@^1.2.1:
   version "1.2.1"
@@ -1525,7 +1525,7 @@ cosmiconfig@^4.0.0:
 
 cpx@^1.5.0:
   version "1.5.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/cpx/-/cpx-1.5.0.tgz?dl=https://registry.npmjs.org/cpx/-/cpx-1.5.0.tgz#185be018511d87270dedccc293171e37655ab88f"
+  resolved "https://registry.yarnpkg.com/cpx/-/cpx-1.5.0.tgz#185be018511d87270dedccc293171e37655ab88f"
   dependencies:
     babel-runtime "^6.9.2"
     chokidar "^1.6.0"
@@ -1672,7 +1672,7 @@ deep-is@~0.1.3:
 
 default-require-extensions@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/default-require-extensions/-/default-require-extensions-1.0.0.tgz?dl=https://registry.npmjs.org/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
+  resolved "https://registry.yarnpkg.com/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
   dependencies:
     strip-bom "^2.0.0"
 
@@ -1684,7 +1684,7 @@ defaults@^1.0.3:
 
 define-properties@^1.1.2:
   version "1.1.2"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/define-properties/-/define-properties-1.1.2.tgz?dl=https://registry.npmjs.org/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
+  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
   dependencies:
     foreach "^2.0.5"
     object-keys "^1.0.8"
@@ -1786,7 +1786,7 @@ duplexer3@^0.1.4:
 
 duplexer@^0.1.1:
   version "0.1.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/duplexer/-/duplexer-0.1.1.tgz?dl=https://registry.npmjs.org/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+  resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
 duplexify@^3.4.2, duplexify@^3.5.3:
   version "3.5.4"
@@ -1852,7 +1852,7 @@ error-ex@^1.2.0, error-ex@^1.3.1:
 
 es-abstract@^1.5.1:
   version "1.11.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/es-abstract/-/es-abstract-1.11.0.tgz?dl=https://registry.npmjs.org/es-abstract/-/es-abstract-1.11.0.tgz#cce87d518f0496893b1a30cd8461835535480681"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.11.0.tgz#cce87d518f0496893b1a30cd8461835535480681"
   dependencies:
     es-to-primitive "^1.1.1"
     function-bind "^1.1.1"
@@ -1862,7 +1862,7 @@ es-abstract@^1.5.1:
 
 es-to-primitive@^1.1.1:
   version "1.1.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/es-to-primitive/-/es-to-primitive-1.1.1.tgz?dl=https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.1.1.tgz#45355248a88979034b6792e19bb81f2b7975dd0d"
+  resolved "https://registry.yarnpkg.com/es-to-primitive/-/es-to-primitive-1.1.1.tgz#45355248a88979034b6792e19bb81f2b7975dd0d"
   dependencies:
     is-callable "^1.1.1"
     is-date-object "^1.0.1"
@@ -1919,7 +1919,7 @@ events@1.1.1:
 
 exec-sh@^0.2.0:
   version "0.2.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/exec-sh/-/exec-sh-0.2.1.tgz?dl=https://registry.npmjs.org/exec-sh/-/exec-sh-0.2.1.tgz#163b98a6e89e6b65b47c2a28d215bc1f63989c38"
+  resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.1.tgz#163b98a6e89e6b65b47c2a28d215bc1f63989c38"
   dependencies:
     merge "^1.1.3"
 
@@ -1977,7 +1977,7 @@ exit-hook@^1.0.0:
 
 exit@^0.1.2:
   version "0.1.2"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/exit/-/exit-0.1.2.tgz?dl=https://registry.npmjs.org/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
+  resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -2100,7 +2100,7 @@ fast-levenshtein@~2.0.4:
 
 fb-watchman@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/fb-watchman/-/fb-watchman-2.0.0.tgz?dl=https://registry.npmjs.org/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
+  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
   dependencies:
     bser "^2.0.0"
 
@@ -2123,7 +2123,7 @@ filename-regex@^2.0.0:
 
 fileset@^2.0.2:
   version "2.0.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/fileset/-/fileset-2.0.3.tgz?dl=https://registry.npmjs.org/fileset/-/fileset-2.0.3.tgz#8e7548a96d3cc2327ee5e674168723a333bba2a0"
+  resolved "https://registry.yarnpkg.com/fileset/-/fileset-2.0.3.tgz#8e7548a96d3cc2327ee5e674168723a333bba2a0"
   dependencies:
     glob "^7.0.3"
     minimatch "^3.0.3"
@@ -2149,7 +2149,7 @@ fill-range@^4.0.0:
 
 find-index@^0.1.1:
   version "0.1.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/find-index/-/find-index-0.1.1.tgz?dl=https://registry.npmjs.org/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
+  resolved "https://registry.yarnpkg.com/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
 
 find-npm-prefix@^1.0.2:
   version "1.0.2"
@@ -2161,7 +2161,7 @@ find-parent-dir@^0.3.0:
 
 find-up@^1.0.0:
   version "1.1.2"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/find-up/-/find-up-1.1.2.tgz?dl=https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
   dependencies:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
@@ -2191,7 +2191,7 @@ for-own@^0.1.4:
 
 foreach@^2.0.5:
   version "2.0.5"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/foreach/-/foreach-2.0.5.tgz?dl=https://registry.npmjs.org/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
+  resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -2207,7 +2207,7 @@ form-data@~1.0.0-rc4:
 
 form-data@~2.1.1:
   version "2.1.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/form-data/-/form-data-2.1.4.tgz?dl=https://registry.npmjs.org/form-data/-/form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1"
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.5"
@@ -2247,7 +2247,7 @@ fs-exists-sync@^0.1.0:
 
 fs-extra@4.0.3:
   version "4.0.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/fs-extra/-/fs-extra-4.0.3.tgz?dl=https://registry.npmjs.org/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -2290,14 +2290,14 @@ fs.realpath@^1.0.0:
 
 fsevents@^1.0.0, fsevents@^1.1.1:
   version "1.1.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/fsevents/-/fsevents-1.1.3.tgz?dl=https://registry.npmjs.org/fsevents/-/fsevents-1.1.3.tgz#11f82318f5fe7bb2cd22965a108e9306208216d8"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.1.3.tgz#11f82318f5fe7bb2cd22965a108e9306208216d8"
   dependencies:
     nan "^2.3.0"
     node-pre-gyp "^0.6.39"
 
 fstream-ignore@^1.0.5:
   version "1.0.5"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/fstream-ignore/-/fstream-ignore-1.0.5.tgz?dl=https://registry.npmjs.org/fstream-ignore/-/fstream-ignore-1.0.5.tgz#9c31dae34767018fe1d249b24dada67d092da105"
+  resolved "https://registry.yarnpkg.com/fstream-ignore/-/fstream-ignore-1.0.5.tgz#9c31dae34767018fe1d249b24dada67d092da105"
   dependencies:
     fstream "^1.0.0"
     inherits "2"
@@ -2314,7 +2314,7 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
 
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/function-bind/-/function-bind-1.1.1.tgz?dl=https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+  resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -2449,7 +2449,7 @@ glob-to-regexp@^0.3.0:
 
 glob2base@^0.0.12:
   version "0.0.12"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/glob2base/-/glob2base-0.0.12.tgz?dl=https://registry.npmjs.org/glob2base/-/glob2base-0.0.12.tgz#9d419b3e28f12e83a362164a277055922c9c0d56"
+  resolved "https://registry.yarnpkg.com/glob2base/-/glob2base-0.0.12.tgz#9d419b3e28f12e83a362164a277055922c9c0d56"
   dependencies:
     find-index "^0.1.1"
 
@@ -2508,7 +2508,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@~4.1.11
 
 growly@^1.3.0:
   version "1.3.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/growly/-/growly-1.3.0.tgz?dl=https://registry.npmjs.org/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+  resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
 handlebars@^4.0.2, handlebars@^4.0.3:
   version "4.0.11"
@@ -2522,7 +2522,7 @@ handlebars@^4.0.2, handlebars@^4.0.3:
 
 har-schema@^1.0.5:
   version "1.0.5"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/har-schema/-/har-schema-1.0.5.tgz?dl=https://registry.npmjs.org/har-schema/-/har-schema-1.0.5.tgz#d263135f43307c02c602afc8fe95970c0151369e"
+  resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-1.0.5.tgz#d263135f43307c02c602afc8fe95970c0151369e"
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -2539,7 +2539,7 @@ har-validator@~2.0.6:
 
 har-validator@~4.2.1:
   version "4.2.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/har-validator/-/har-validator-4.2.1.tgz?dl=https://registry.npmjs.org/har-validator/-/har-validator-4.2.1.tgz#33481d0f1bbff600dd203d75812a6a5fba002e2a"
+  resolved "https://registry.yarnpkg.com/har-validator/-/har-validator-4.2.1.tgz#33481d0f1bbff600dd203d75812a6a5fba002e2a"
   dependencies:
     ajv "^4.9.1"
     har-schema "^1.0.5"
@@ -2559,7 +2559,7 @@ has-ansi@^2.0.0:
 
 has-flag@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/has-flag/-/has-flag-1.0.0.tgz?dl=https://registry.npmjs.org/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -2598,7 +2598,7 @@ has-values@^1.0.0:
 
 has@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/has/-/has-1.0.1.tgz?dl=https://registry.npmjs.org/has/-/has-1.0.1.tgz#8461733f538b0837c9361e39a9ab9e9704dc2f28"
+  resolved "https://registry.yarnpkg.com/has/-/has-1.0.1.tgz#8461733f538b0837c9361e39a9ab9e9704dc2f28"
   dependencies:
     function-bind "^1.0.2"
 
@@ -2739,7 +2739,7 @@ import-lazy@^2.1.0:
 
 import-local@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/import-local/-/import-local-1.0.0.tgz?dl=https://registry.npmjs.org/import-local/-/import-local-1.0.0.tgz#5e4ffdc03f4fe6c009c6729beb29631c2f8227bc"
+  resolved "https://registry.yarnpkg.com/import-local/-/import-local-1.0.0.tgz#5e4ffdc03f4fe6c009c6729beb29631c2f8227bc"
   dependencies:
     pkg-dir "^2.0.0"
     resolve-cwd "^2.0.0"
@@ -2843,7 +2843,7 @@ is-arrayish@^0.2.1:
 
 is-binary-path@^1.0.0:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-binary-path/-/is-binary-path-1.0.1.tgz?dl=https://registry.npmjs.org/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
+  resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
   dependencies:
     binary-extensions "^1.0.0"
 
@@ -2859,7 +2859,7 @@ is-builtin-module@^1.0.0:
 
 is-callable@^1.1.1, is-callable@^1.1.3:
   version "1.1.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-callable/-/is-callable-1.1.3.tgz?dl=https://registry.npmjs.org/is-callable/-/is-callable-1.1.3.tgz#86eb75392805ddc33af71c92a0eedf74ee7604b2"
+  resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.3.tgz#86eb75392805ddc33af71c92a0eedf74ee7604b2"
 
 is-ci@^1.0.10:
   version "1.1.0"
@@ -2887,7 +2887,7 @@ is-data-descriptor@^1.0.0:
 
 is-date-object@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-date-object/-/is-date-object-1.0.1.tgz?dl=https://registry.npmjs.org/is-date-object/-/is-date-object-1.0.1.tgz#9aa20eb6aeebbff77fbd33e74ca01b33581d3a16"
+  resolved "https://registry.yarnpkg.com/is-date-object/-/is-date-object-1.0.1.tgz#9aa20eb6aeebbff77fbd33e74ca01b33581d3a16"
 
 is-descriptor@^0.1.0:
   version "0.1.6"
@@ -3070,7 +3070,7 @@ is-redirect@^1.0.0:
 
 is-regex@^1.0.4:
   version "1.0.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-regex/-/is-regex-1.0.4.tgz?dl=https://registry.npmjs.org/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
+  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
   dependencies:
     has "^1.0.1"
 
@@ -3098,7 +3098,7 @@ is-subset@^0.1.1:
 
 is-symbol@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-symbol/-/is-symbol-1.0.1.tgz?dl=https://registry.npmjs.org/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
+  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
 
 is-text-path@^1.0.0:
   version "1.0.1"
@@ -3112,7 +3112,7 @@ is-typedarray@~1.0.0:
 
 is-utf8@^0.2.0:
   version "0.2.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/is-utf8/-/is-utf8-0.2.1.tgz?dl=https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
+  resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
 is-windows@^1.0.2:
   version "1.0.2"
@@ -3152,7 +3152,7 @@ issue-parser@^1.0.2:
 
 istanbul-api@^1.1.14:
   version "1.3.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-api/-/istanbul-api-1.3.1.tgz?dl=https://registry.npmjs.org/istanbul-api/-/istanbul-api-1.3.1.tgz#4c3b05d18c0016d1022e079b98dc82c40f488954"
+  resolved "https://registry.yarnpkg.com/istanbul-api/-/istanbul-api-1.3.1.tgz#4c3b05d18c0016d1022e079b98dc82c40f488954"
   dependencies:
     async "^2.1.4"
     compare-versions "^3.1.0"
@@ -3169,17 +3169,17 @@ istanbul-api@^1.1.14:
 
 istanbul-lib-coverage@^1.1.1, istanbul-lib-coverage@^1.1.2, istanbul-lib-coverage@^1.2.0:
   version "1.2.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-coverage/-/istanbul-lib-coverage-1.2.0.tgz?dl=https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-1.2.0.tgz#f7d8f2e42b97e37fe796114cb0f9d68b5e3a4341"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-1.2.0.tgz#f7d8f2e42b97e37fe796114cb0f9d68b5e3a4341"
 
 istanbul-lib-hook@^1.2.0:
   version "1.2.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-hook/-/istanbul-lib-hook-1.2.0.tgz?dl=https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-1.2.0.tgz#ae556fd5a41a6e8efa0b1002b1e416dfeaf9816c"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-hook/-/istanbul-lib-hook-1.2.0.tgz#ae556fd5a41a6e8efa0b1002b1e416dfeaf9816c"
   dependencies:
     append-transform "^0.4.0"
 
 istanbul-lib-instrument@^1.10.1, istanbul-lib-instrument@^1.8.0:
   version "1.10.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-instrument/-/istanbul-lib-instrument-1.10.1.tgz?dl=https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-1.10.1.tgz#724b4b6caceba8692d3f1f9d0727e279c401af7b"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-1.10.1.tgz#724b4b6caceba8692d3f1f9d0727e279c401af7b"
   dependencies:
     babel-generator "^6.18.0"
     babel-template "^6.16.0"
@@ -3191,7 +3191,7 @@ istanbul-lib-instrument@^1.10.1, istanbul-lib-instrument@^1.8.0:
 
 istanbul-lib-report@^1.1.4:
   version "1.1.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-report/-/istanbul-lib-report-1.1.4.tgz?dl=https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-1.1.4.tgz#e886cdf505c4ebbd8e099e4396a90d0a28e2acb5"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-report/-/istanbul-lib-report-1.1.4.tgz#e886cdf505c4ebbd8e099e4396a90d0a28e2acb5"
   dependencies:
     istanbul-lib-coverage "^1.2.0"
     mkdirp "^0.5.1"
@@ -3200,7 +3200,7 @@ istanbul-lib-report@^1.1.4:
 
 istanbul-lib-source-maps@^1.2.1:
   version "1.2.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.3.tgz?dl=https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.3.tgz#20fb54b14e14b3fb6edb6aca3571fd2143db44e6"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.3.tgz#20fb54b14e14b3fb6edb6aca3571fd2143db44e6"
   dependencies:
     debug "^3.1.0"
     istanbul-lib-coverage "^1.1.2"
@@ -3210,7 +3210,7 @@ istanbul-lib-source-maps@^1.2.1:
 
 istanbul-lib-source-maps@^1.2.4:
   version "1.2.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.4.tgz?dl=https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.4.tgz#cc7ccad61629f4efff8e2f78adb8c522c9976ec7"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.4.tgz#cc7ccad61629f4efff8e2f78adb8c522c9976ec7"
   dependencies:
     debug "^3.1.0"
     istanbul-lib-coverage "^1.2.0"
@@ -3220,7 +3220,7 @@ istanbul-lib-source-maps@^1.2.4:
 
 istanbul-reports@^1.3.0:
   version "1.3.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/istanbul-reports/-/istanbul-reports-1.3.0.tgz?dl=https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-1.3.0.tgz#2f322e81e1d9520767597dca3c20a0cce89a3554"
+  resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.3.0.tgz#2f322e81e1d9520767597dca3c20a0cce89a3554"
   dependencies:
     handlebars "^4.0.3"
 
@@ -3230,13 +3230,13 @@ java-properties@^0.2.9:
 
 jest-changed-files@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-changed-files/-/jest-changed-files-22.4.3.tgz?dl=https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-22.4.3.tgz#8882181e022c38bd46a2e4d18d44d19d90a90fb2"
+  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-22.4.3.tgz#8882181e022c38bd46a2e4d18d44d19d90a90fb2"
   dependencies:
     throat "^4.0.0"
 
 jest-cli@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-cli/-/jest-cli-22.4.3.tgz?dl=https://registry.npmjs.org/jest-cli/-/jest-cli-22.4.3.tgz#bf16c4a5fb7edc3fa5b9bb7819e34139e88a72c7"
+  resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-22.4.3.tgz#bf16c4a5fb7edc3fa5b9bb7819e34139e88a72c7"
   dependencies:
     ansi-escapes "^3.0.0"
     chalk "^2.0.1"
@@ -3300,7 +3300,7 @@ jest-diff@^22.4.3:
 
 jest-docblock@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-docblock/-/jest-docblock-22.4.3.tgz?dl=https://registry.npmjs.org/jest-docblock/-/jest-docblock-22.4.3.tgz#50886f132b42b280c903c592373bb6e93bb68b19"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-22.4.3.tgz#50886f132b42b280c903c592373bb6e93bb68b19"
   dependencies:
     detect-newline "^2.1.0"
 
@@ -3325,7 +3325,7 @@ jest-get-type@^22.4.3:
 
 jest-haste-map@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-haste-map/-/jest-haste-map-22.4.3.tgz?dl=https://registry.npmjs.org/jest-haste-map/-/jest-haste-map-22.4.3.tgz#25842fa2ba350200767ac27f658d58b9d5c2e20b"
+  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-22.4.3.tgz#25842fa2ba350200767ac27f658d58b9d5c2e20b"
   dependencies:
     fb-watchman "^2.0.0"
     graceful-fs "^4.1.11"
@@ -3353,7 +3353,7 @@ jest-jasmine2@^22.4.3:
 
 jest-leak-detector@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-leak-detector/-/jest-leak-detector-22.4.3.tgz?dl=https://registry.npmjs.org/jest-leak-detector/-/jest-leak-detector-22.4.3.tgz#2b7b263103afae8c52b6b91241a2de40117e5b35"
+  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-22.4.3.tgz#2b7b263103afae8c52b6b91241a2de40117e5b35"
   dependencies:
     pretty-format "^22.4.3"
 
@@ -3385,7 +3385,7 @@ jest-regex-util@^22.4.3:
 
 jest-resolve-dependencies@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-resolve-dependencies/-/jest-resolve-dependencies-22.4.3.tgz?dl=https://registry.npmjs.org/jest-resolve-dependencies/-/jest-resolve-dependencies-22.4.3.tgz#e2256a5a846732dc3969cb72f3c9ad7725a8195e"
+  resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-22.4.3.tgz#e2256a5a846732dc3969cb72f3c9ad7725a8195e"
   dependencies:
     jest-regex-util "^22.4.3"
 
@@ -3398,7 +3398,7 @@ jest-resolve@^22.4.3:
 
 jest-runner@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-runner/-/jest-runner-22.4.3.tgz?dl=https://registry.npmjs.org/jest-runner/-/jest-runner-22.4.3.tgz#298ddd6a22b992c64401b4667702b325e50610c3"
+  resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-22.4.3.tgz#298ddd6a22b992c64401b4667702b325e50610c3"
   dependencies:
     exit "^0.1.2"
     jest-config "^22.4.3"
@@ -3414,7 +3414,7 @@ jest-runner@^22.4.3:
 
 jest-runtime@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-runtime/-/jest-runtime-22.4.3.tgz?dl=https://registry.npmjs.org/jest-runtime/-/jest-runtime-22.4.3.tgz#b69926c34b851b920f666c93e86ba2912087e3d0"
+  resolved "https://registry.yarnpkg.com/jest-runtime/-/jest-runtime-22.4.3.tgz#b69926c34b851b920f666c93e86ba2912087e3d0"
   dependencies:
     babel-core "^6.0.0"
     babel-jest "^22.4.3"
@@ -3439,7 +3439,7 @@ jest-runtime@^22.4.3:
 
 jest-serializer@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-serializer/-/jest-serializer-22.4.3.tgz?dl=https://registry.npmjs.org/jest-serializer/-/jest-serializer-22.4.3.tgz#a679b81a7f111e4766235f4f0c46d230ee0f7436"
+  resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-22.4.3.tgz#a679b81a7f111e4766235f4f0c46d230ee0f7436"
 
 jest-snapshot@^22.4.3:
   version "22.4.3"
@@ -3476,13 +3476,13 @@ jest-validate@^22.4.0, jest-validate@^22.4.3:
 
 jest-worker@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest-worker/-/jest-worker-22.4.3.tgz?dl=https://registry.npmjs.org/jest-worker/-/jest-worker-22.4.3.tgz#5c421417cba1c0abf64bf56bd5fb7968d79dd40b"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-22.4.3.tgz#5c421417cba1c0abf64bf56bd5fb7968d79dd40b"
   dependencies:
     merge-stream "^1.0.1"
 
 jest@^22.4.3:
   version "22.4.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jest/-/jest-22.4.3.tgz?dl=https://registry.npmjs.org/jest/-/jest-22.4.3.tgz#2261f4b117dc46d9a4a1a673d2150958dee92f16"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-22.4.3.tgz#2261f4b117dc46d9a4a1a673d2150958dee92f16"
   dependencies:
     import-local "^1.0.0"
     jest-cli "^22.4.3"
@@ -3559,7 +3559,7 @@ json-schema@0.2.3:
 
 json-stable-stringify@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz?dl=https://registry.npmjs.org/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
+  resolved "https://registry.yarnpkg.com/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
   dependencies:
     jsonify "~0.0.0"
 
@@ -3579,7 +3579,7 @@ jsonfile@^4.0.0:
 
 jsonify@~0.0.0:
   version "0.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/jsonify/-/jsonify-0.0.0.tgz?dl=https://registry.npmjs.org/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
+  resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
 jsonparse@^1.2.0:
   version "1.3.1"
@@ -3768,7 +3768,7 @@ listr@^0.13.0:
 
 load-json-file@^1.0.0:
   version "1.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/load-json-file/-/load-json-file-1.1.0.tgz?dl=https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
+  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
   dependencies:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
@@ -3933,7 +3933,7 @@ make-fetch-happen@^2.5.0, make-fetch-happen@^2.6.0:
 
 makeerror@1.0.x:
   version "1.0.11"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/makeerror/-/makeerror-1.0.11.tgz?dl=https://registry.npmjs.org/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"
+  resolved "https://registry.yarnpkg.com/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"
   dependencies:
     tmpl "1.0.x"
 
@@ -3995,7 +3995,7 @@ meow@^4.0.0:
 
 merge-stream@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/merge-stream/-/merge-stream-1.0.1.tgz?dl=https://registry.npmjs.org/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
+  resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
   dependencies:
     readable-stream "^2.0.1"
 
@@ -4005,7 +4005,7 @@ merge2@^1.2.1:
 
 merge@^1.1.3:
   version "1.2.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/merge/-/merge-1.2.0.tgz?dl=https://registry.npmjs.org/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
+  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
 micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
@@ -4194,7 +4194,7 @@ nan@2.8.0:
 
 nan@^2.3.0:
   version "2.10.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/nan/-/nan-2.10.0.tgz?dl=https://registry.npmjs.org/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
 nanomatch@^1.2.9:
   version "1.2.9"
@@ -4269,11 +4269,11 @@ node-gyp@^3.6.2:
 
 node-int64@^0.4.0:
   version "0.4.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/node-int64/-/node-int64-0.4.0.tgz?dl=https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
+  resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
 
 node-notifier@^5.2.1:
   version "5.2.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/node-notifier/-/node-notifier-5.2.1.tgz?dl=https://registry.npmjs.org/node-notifier/-/node-notifier-5.2.1.tgz#fa313dd08f5517db0e2502e5758d664ac69f9dea"
+  resolved "https://registry.yarnpkg.com/node-notifier/-/node-notifier-5.2.1.tgz#fa313dd08f5517db0e2502e5758d664ac69f9dea"
   dependencies:
     growly "^1.3.0"
     semver "^5.4.1"
@@ -4282,7 +4282,7 @@ node-notifier@^5.2.1:
 
 node-pre-gyp@^0.6.39:
   version "0.6.39"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz?dl=https://registry.npmjs.org/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz#c00e96860b23c0e1420ac7befc5044e1d78d8649"
+  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz#c00e96860b23c0e1420ac7befc5044e1d78d8649"
   dependencies:
     detect-libc "^1.0.2"
     hawk "3.1.3"
@@ -4600,7 +4600,7 @@ object-copy@^0.1.0:
 
 object-keys@^1.0.8:
   version "1.0.11"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/object-keys/-/object-keys-1.0.11.tgz?dl=https://registry.npmjs.org/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
+  resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -4610,7 +4610,7 @@ object-visit@^1.0.0:
 
 object.getownpropertydescriptors@^2.0.3:
   version "2.0.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.0.3.tgz?dl=https://registry.npmjs.org/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.0.3.tgz#8758c846f5b407adab0f236e0986f14b051caa16"
+  resolved "https://registry.yarnpkg.com/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.0.3.tgz#8758c846f5b407adab0f236e0986f14b051caa16"
   dependencies:
     define-properties "^1.1.2"
     es-abstract "^1.5.1"
@@ -4819,7 +4819,7 @@ parse-glob@^3.0.4:
 
 parse-json@^2.2.0:
   version "2.2.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/parse-json/-/parse-json-2.2.0.tgz?dl=https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
+  resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   dependencies:
     error-ex "^1.2.0"
 
@@ -4855,7 +4855,7 @@ path-dirname@^1.0.0:
 
 path-exists@^2.0.0:
   version "2.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/path-exists/-/path-exists-2.1.0.tgz?dl=https://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
   dependencies:
     pinkie-promise "^2.0.0"
 
@@ -4877,11 +4877,11 @@ path-key@^2.0.0, path-key@^2.0.1:
 
 path-parse@^1.0.5:
   version "1.0.5"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/path-parse/-/path-parse-1.0.5.tgz?dl=https://registry.npmjs.org/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
 path-type@^1.0.0:
   version "1.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/path-type/-/path-type-1.1.0.tgz?dl=https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
+  resolved "https://registry.yarnpkg.com/path-type/-/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
   dependencies:
     graceful-fs "^4.1.2"
     pify "^2.0.0"
@@ -4895,7 +4895,7 @@ path-type@^3.0.0:
 
 performance-now@^0.2.0:
   version "0.2.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/performance-now/-/performance-now-0.2.0.tgz?dl=https://registry.npmjs.org/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -4903,7 +4903,7 @@ performance-now@^2.1.0:
 
 pify@^2.0.0:
   version "2.3.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/pify/-/pify-2.3.0.tgz?dl=https://registry.npmjs.org/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
 pify@^3.0.0:
   version "3.0.0"
@@ -4921,7 +4921,7 @@ pinkie@^2.0.0:
 
 pkg-dir@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/pkg-dir/-/pkg-dir-2.0.0.tgz?dl=https://registry.npmjs.org/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
   dependencies:
     find-up "^2.1.0"
 
@@ -5090,7 +5090,7 @@ qs@~6.2.0:
 
 qs@~6.4.0:
   version "6.4.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/qs/-/qs-6.4.0.tgz?dl=https://registry.npmjs.org/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 qs@~6.5.1:
   version "6.5.1"
@@ -5174,7 +5174,7 @@ read-package-tree@~5.1.6:
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/read-pkg-up/-/read-pkg-up-1.0.1.tgz?dl=https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
+  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
   dependencies:
     find-up "^1.0.0"
     read-pkg "^1.0.0"
@@ -5188,7 +5188,7 @@ read-pkg-up@^3.0.0:
 
 read-pkg@^1.0.0:
   version "1.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/read-pkg/-/read-pkg-1.1.0.tgz?dl=https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
+  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
   dependencies:
     load-json-file "^1.0.0"
     normalize-package-data "^2.3.2"
@@ -5251,7 +5251,7 @@ readdir-scoped-modules@^1.0.0:
 
 readdirp@^2.0.0:
   version "2.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/readdirp/-/readdirp-2.1.0.tgz?dl=https://registry.npmjs.org/readdirp/-/readdirp-2.1.0.tgz#4ed0ad060df3073300c48440373f72d1cc642d78"
+  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-2.1.0.tgz#4ed0ad060df3073300c48440373f72d1cc642d78"
   dependencies:
     graceful-fs "^4.1.2"
     minimatch "^3.0.2"
@@ -5260,7 +5260,7 @@ readdirp@^2.0.0:
 
 realpath-native@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/realpath-native/-/realpath-native-1.0.0.tgz?dl=https://registry.npmjs.org/realpath-native/-/realpath-native-1.0.0.tgz#7885721a83b43bd5327609f0ddecb2482305fdf0"
+  resolved "https://registry.yarnpkg.com/realpath-native/-/realpath-native-1.0.0.tgz#7885721a83b43bd5327609f0ddecb2482305fdf0"
   dependencies:
     util.promisify "^1.0.0"
 
@@ -5417,7 +5417,7 @@ request@2, request@^2.74.0, request@^2.83.0, request@^2.85.0:
 
 request@2.81.0:
   version "2.81.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/request/-/request-2.81.0.tgz?dl=https://registry.npmjs.org/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
     aws-sign2 "~0.6.0"
     aws4 "^1.2.1"
@@ -5509,7 +5509,7 @@ require-main-filename@^1.0.1:
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/resolve-cwd/-/resolve-cwd-2.0.0.tgz?dl=https://registry.npmjs.org/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
+  resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
   dependencies:
     resolve-from "^3.0.0"
 
@@ -5531,7 +5531,7 @@ resolve@1.1.7:
 
 resolve@^1.1.7:
   version "1.7.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/resolve/-/resolve-1.7.1.tgz?dl=https://registry.npmjs.org/resolve/-/resolve-1.7.1.tgz#aadd656374fd298aee895bc026b8297418677fd3"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.7.1.tgz#aadd656374fd298aee895bc026b8297418677fd3"
   dependencies:
     path-parse "^1.0.5"
 
@@ -5603,7 +5603,7 @@ safer-buffer@^2.1.0:
 
 sane@^2.0.0:
   version "2.5.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/sane/-/sane-2.5.0.tgz?dl=https://registry.npmjs.org/sane/-/sane-2.5.0.tgz#6359cd676f5efd9988b264d8ce3b827dd6b27bec"
+  resolved "https://registry.yarnpkg.com/sane/-/sane-2.5.0.tgz#6359cd676f5efd9988b264d8ce3b827dd6b27bec"
   dependencies:
     anymatch "^2.0.0"
     exec-sh "^0.2.0"
@@ -5706,7 +5706,7 @@ set-blocking@^2.0.0, set-blocking@~2.0.0:
 
 set-immediate-shim@^1.0.1:
   version "1.0.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz?dl=https://registry.npmjs.org/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
+  resolved "https://registry.yarnpkg.com/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
 
 set-value@^0.4.3:
   version "0.4.3"
@@ -5745,7 +5745,7 @@ shebang-regex@^1.0.0:
 
 shell-quote@^1.6.1:
   version "1.6.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/shell-quote/-/shell-quote-1.6.1.tgz?dl=https://registry.npmjs.org/shell-quote/-/shell-quote-1.6.1.tgz#f4781949cce402697127430ea3b3c5476f481767"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.6.1.tgz#f4781949cce402697127430ea3b3c5476f481767"
   dependencies:
     array-filter "~0.0.0"
     array-map "~0.0.0"
@@ -5754,7 +5754,7 @@ shell-quote@^1.6.1:
 
 shellwords@^0.1.1:
   version "0.1.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/shellwords/-/shellwords-0.1.1.tgz?dl=https://registry.npmjs.org/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
+  resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
@@ -6032,7 +6032,7 @@ string-argv@^0.0.2:
 
 string-length@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/string-length/-/string-length-2.0.0.tgz?dl=https://registry.npmjs.org/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
+  resolved "https://registry.yarnpkg.com/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
   dependencies:
     astral-regex "^1.0.0"
     strip-ansi "^4.0.0"
@@ -6096,7 +6096,7 @@ strip-bom@3.0.0, strip-bom@^3.0.0:
 
 strip-bom@^2.0.0:
   version "2.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/strip-bom/-/strip-bom-2.0.0.tgz?dl=https://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
+  resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
   dependencies:
     is-utf8 "^0.2.0"
 
@@ -6114,7 +6114,7 @@ strip-json-comments@~2.0.1:
 
 subarg@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/subarg/-/subarg-1.0.0.tgz?dl=https://registry.npmjs.org/subarg/-/subarg-1.0.0.tgz#f62cf17581e996b48fc965699f54c06ae268b8d2"
+  resolved "https://registry.yarnpkg.com/subarg/-/subarg-1.0.0.tgz#f62cf17581e996b48fc965699f54c06ae268b8d2"
   dependencies:
     minimist "^1.1.0"
 
@@ -6124,7 +6124,7 @@ supports-color@^2.0.0:
 
 supports-color@^3.1.2:
   version "3.2.3"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/supports-color/-/supports-color-3.2.3.tgz?dl=https://registry.npmjs.org/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
   dependencies:
     has-flag "^1.0.0"
 
@@ -6157,7 +6157,7 @@ tar-fs@^1.13.0:
 
 tar-pack@^3.4.0:
   version "3.4.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/tar-pack/-/tar-pack-3.4.1.tgz?dl=https://registry.npmjs.org/tar-pack/-/tar-pack-3.4.1.tgz#e1dbc03a9b9d3ba07e896ad027317eb679a10a1f"
+  resolved "https://registry.yarnpkg.com/tar-pack/-/tar-pack-3.4.1.tgz#e1dbc03a9b9d3ba07e896ad027317eb679a10a1f"
   dependencies:
     debug "^2.2.0"
     fstream "^1.0.10"
@@ -6205,7 +6205,7 @@ term-size@^1.2.0:
 
 test-exclude@^4.2.1:
   version "4.2.1"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/test-exclude/-/test-exclude-4.2.1.tgz?dl=https://registry.npmjs.org/test-exclude/-/test-exclude-4.2.1.tgz#dfa222f03480bca69207ca728b37d74b45f724fa"
+  resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-4.2.1.tgz#dfa222f03480bca69207ca728b37d74b45f724fa"
   dependencies:
     arrify "^1.0.1"
     micromatch "^3.1.8"
@@ -6223,7 +6223,7 @@ text-table@~0.2.0:
 
 throat@^4.0.0:
   version "4.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/throat/-/throat-4.1.0.tgz?dl=https://registry.npmjs.org/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
+  resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
 through2@^2.0.0, through2@^2.0.2, through2@~2.0.0:
   version "2.0.3"
@@ -6248,7 +6248,7 @@ tmp@^0.0.33:
 
 tmpl@1.0.x:
   version "1.0.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/tmpl/-/tmpl-1.0.4.tgz?dl=https://registry.npmjs.org/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
@@ -6315,7 +6315,7 @@ trim-right@^1.0.1:
 
 ts-jest@^22.4.4:
   version "22.4.4"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/ts-jest/-/ts-jest-22.4.4.tgz?dl=https://registry.npmjs.org/ts-jest/-/ts-jest-22.4.4.tgz#7b5c0abb2188fe7170840df9f80e78659aaf8a24"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-22.4.4.tgz#7b5c0abb2188fe7170840df9f80e78659aaf8a24"
   dependencies:
     babel-core "^6.26.0"
     babel-plugin-istanbul "^4.1.4"
@@ -6515,7 +6515,7 @@ util-extend@^1.0.1:
 
 util.promisify@^1.0.0:
   version "1.0.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/util.promisify/-/util.promisify-1.0.0.tgz?dl=https://registry.npmjs.org/util.promisify/-/util.promisify-1.0.0.tgz#440f7165a459c9a16dc145eb8e72f35687097030"
+  resolved "https://registry.yarnpkg.com/util.promisify/-/util.promisify-1.0.0.tgz#440f7165a459c9a16dc145eb8e72f35687097030"
   dependencies:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
@@ -6561,13 +6561,13 @@ w3c-hr-time@^1.0.1:
 
 walker@~1.0.5:
   version "1.0.7"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/walker/-/walker-1.0.7.tgz?dl=https://registry.npmjs.org/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
+  resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
   dependencies:
     makeerror "1.0.x"
 
 watch@~0.18.0:
   version "0.18.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/watch/-/watch-0.18.0.tgz?dl=https://registry.npmjs.org/watch/-/watch-0.18.0.tgz#28095476c6df7c90c963138990c0a5423eb4b986"
+  resolved "https://registry.yarnpkg.com/watch/-/watch-0.18.0.tgz#28095476c6df7c90c963138990c0a5423eb4b986"
   dependencies:
     exec-sh "^0.2.0"
     minimist "^1.2.0"
@@ -6717,7 +6717,7 @@ yallist@^3.0.0, yallist@^3.0.2:
 
 yargs-parser@^8.1.0:
   version "8.1.0"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/yargs-parser/-/yargs-parser-8.1.0.tgz?dl=https://registry.npmjs.org/yargs-parser/-/yargs-parser-8.1.0.tgz#f1376a33b6629a5d063782944da732631e966950"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-8.1.0.tgz#f1376a33b6629a5d063782944da732631e966950"
   dependencies:
     camelcase "^4.1.0"
 
@@ -6729,7 +6729,7 @@ yargs-parser@^9.0.2:
 
 yargs@^10.0.3:
   version "10.1.2"
-  resolved "https://indigoag.jfrog.io/indigoag/api/npm/npm/yargs/-/yargs-10.1.2.tgz?dl=https://registry.npmjs.org/yargs/-/yargs-10.1.2.tgz#454d074c2b16a51a43e2fb7807e4f9de69ccb5c5"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.1.2.tgz#454d074c2b16a51a43e2fb7807e4f9de69ccb5c5"
   dependencies:
     cliui "^4.0.0"
     decamelize "^1.1.1"
