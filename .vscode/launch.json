@@ -22,19 +22,6 @@
       ]
     },
     {
-      "name": "Typescript",
-      "type": "node",
-      "request": "launch",
-      "program": "${workspaceRoot}/${relativeFile}",
-      "sourceMaps": true,
-      "cwd": "${workspaceRoot}",
-      "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
-      ],
-      "preLaunchTask": "build",
-      "runtimeVersion": "8.10.0"
-    },
-    {
       "name": "TS-Node",
       "type": "node",
       "request": "launch",
