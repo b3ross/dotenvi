@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Jest",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/jest-cli/bin/jest.js",
+      "stopOnEntry": false,
+      "args": [
+        "--runInBand",
+        "${file}"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "legacy",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "env": {
+        "IA_FARMAPI_DB_LOGGING": "true"
+      }
+    },
+    {
+      "name": "Typescript",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/${relativeFile}",
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "preLaunchTask": "build",
+      "env": {
+        "IA_FARMAPI_DB_LOGGING": "true"
+      },
+      "runtimeVersion": "8.10.0"
+    },
+    {
+      "name": "TS-Node",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${relativeFile}"
+      ],
+      "runtimeArgs": [
+        "--nolazy",
+        "-r",
+        "ts-node/register"
+      ],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "runtimeVersion": "8.10.0"
+    }
+  ]
+}

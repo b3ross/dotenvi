@@ -27,6 +27,7 @@ Define your configuration in a yaml file at the root of your application:
 default_env: &default_env
   SERVICE_URL: ${cft:my-stack.ServiceURL}  ## Reference to an AWS CFT stack output
   SOME_ENV_VARIABLE: ${env:SOME_ENV_VARIABLE}  ## Reference to an external environment variable
+  SOME_CREDSTASH_VARIABLE: ${cred:SOME_CREDSTASH_VARIABLE}  ## Reference to a credstash key
   SOME_CONSTANT: SOME_CONSTANT
 
 development:
@@ -36,8 +37,8 @@ staging:
   <<: *default_env
 
 production:
-  SOME_CONSTANT: OVERRIDE_FOR_PRODUCTION
   <<: *default_env
+  SOME_CONSTANT: OVERRIDE_FOR_PRODUCTION
 ```
 
 Then, run `yarn dotenvi -s <stage>` to generate a `.env` file for the stage desired (e.g., development, staging, production, etc...).  Use the generated `.env` file in your normal processes using [dotenv](https://github.com/motdotla/dotenv). 

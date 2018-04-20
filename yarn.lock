@@ -140,6 +140,10 @@ acorn@^5.0.0, acorn@^5.3.0:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.5.3.tgz#f473dd47e0277a08e28e9bec5aeeb04751f0b8c9"
 
+aes-js@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.1.1.tgz#89fd1f94ae51b4c72d62466adc1a7323ff52f072"
+
 agent-base@4, agent-base@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
@@ -405,6 +409,21 @@ atob@^2.0.0:
 aws-sdk@*, aws-sdk@^2.224.1:
   version "2.224.1"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.224.1.tgz#82fe93e10b3e818f315c35ce8667cdc8db94a0b3"
+  dependencies:
+    buffer "4.9.1"
+    events "1.1.1"
+    ieee754 "1.1.8"
+    jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    uuid "3.1.0"
+    xml2js "0.4.17"
+    xmlbuilder "4.2.1"
+
+aws-sdk@^2.171.0:
+  version "2.225.1"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.225.1.tgz#6ec6994a6337f2b553b16f6576df34ea1ac314d8"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -4299,6 +4318,14 @@ node-pre-gyp@^0.6.39:
 node-uuid@~1.4.7:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
+
+nodecredstash@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nodecredstash/-/nodecredstash-2.0.2.tgz#2a36ae12534c4e975aafde1deafdd85773eb5dcb"
+  dependencies:
+    aes-js "^3.1.0"
+    aws-sdk "^2.171.0"
+    debug "^3.1.0"
 
 noop-logger@^0.1.1:
   version "0.1.1"
