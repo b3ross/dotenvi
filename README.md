@@ -1,6 +1,10 @@
 # dotenvi
 A library for generating dotenv files
 
+[![CircleCI](https://circleci.com/gh/b3ross/dotenvi/tree/master.svg?style=svg)](https://circleci.com/gh/b3ross/dotenvi/tree/master)
+[![npm version](https://badge.fury.io/js/dotenvi.svg)](https://badge.fury.io/js/dotenvi)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 ## Motivation
 The library `dotenv` is a simple, convenient mechanism to add configuration to your node application.  With simplicity, however, comes drawbacks.  Dotenvi (pronounced "dotenvee") attempts to address those drawbacks.
 
