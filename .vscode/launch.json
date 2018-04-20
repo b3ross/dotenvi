@@ -19,10 +19,7 @@
       "sourceMaps": true,
       "outFiles": [
         "${workspaceRoot}/dist/**/*.js"
-      ],
-      "env": {
-        "IA_FARMAPI_DB_LOGGING": "true"
-      }
+      ]
     },
     {
       "name": "Typescript",
@@ -35,9 +32,6 @@
         "${workspaceRoot}/dist/**/*.js"
       ],
       "preLaunchTask": "build",
-      "env": {
-        "IA_FARMAPI_DB_LOGGING": "true"
-      },
       "runtimeVersion": "8.10.0"
     },
     {
