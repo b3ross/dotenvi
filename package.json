@@ -8,11 +8,26 @@
     "url": "https://github.com/b3ross/dotenvi/issues"
   },
   "scripts": {
+    "build": "yarn tsc",
+    "test": "yarn jest",
     "precommit": "lint-staged",
     "release": "semantic-release"
   },
   "bin": {
     "dotenvi": "dist/index.js"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
@@ -21,7 +36,9 @@
     "@types/node": "^9.6.4",
     "argparse": "^1.0.10",
     "aws-sdk": "^2.224.1",
+    "jest": "^22.4.3",
     "js-yaml": "^3.11.0",
+    "ts-jest": "^22.4.4",
     "typescript": "^2.8.1"
   },
   "devDependencies": {

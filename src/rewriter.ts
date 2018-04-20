@@ -1,20 +1,19 @@
-import { ResolverMap } from './types';
+import { ResolverMap, Document } from './types';
 
-export class Parser {
+export class Rewriter {
   constructor(private resolvers: ResolverMap) { }
 
-  async parse(document: any): Promise<any> {
+  async rewrite(document: Document): Promise<Document> {
     const variables = Object.keys(document);
-    const result = {};
+    const result: Document = {};
     for (const variable of variables) {
       const value = document[variable];
-      (result as any)[variable] = await this.parseValue(value);
+      result[variable] = await this.rewriteValue(value);
     }
     return result;
   }
 
-  private async parseValue(value: string): Promise<string> {
-    // TODO Handle parsing embedded references
+  private async rewriteValue(value: string): Promise<string> {
     const regex = new RegExp('\\${([a-z]+):(.*)}');
     const results = value.match(regex);
     const resolverName = results && results[1];
