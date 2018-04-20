@@ -1,12 +1,15 @@
 import * as AWS from 'aws-sdk';
 import { CloudFormation, Config } from 'aws-sdk';
 import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
+import { promisify } from 'util';
 
 import { ResolverMap } from './types';
 
+const Credstash = require('nodecredstash');
 
 export const resolvers: ResolverMap = {
   cft: async (argument: string) => {
+
     if (!AWS.config.region) {
       AWS.config.update({ region: 'us-east-1' });
     }
@@ -37,5 +40,13 @@ export const resolvers: ResolverMap = {
   },
   constant: async (argument: string) => {
     return argument;
+  },
+  cred: async (argument: string) => {
+    const credstash = new Credstash({ awsOpts: { region: 'us-east-1' } });
+    const promisified = promisify(credstash.getSecret);
+    return promisified({ name: argument })
+      .catch((error: Error) => {
+        throw new Error(`Could not load value ${argument} from credstash: ${error.stack}`);
+      });
   }
 };

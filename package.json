@@ -38,6 +38,7 @@
     "aws-sdk": "^2.224.1",
     "jest": "^22.4.3",
     "js-yaml": "^3.11.0",
+    "nodecredstash": "^2.0.2",
     "ts-jest": "^22.4.4",
     "typescript": "^2.8.1"
   },
