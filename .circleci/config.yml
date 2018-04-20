@@ -13,7 +13,7 @@ jobs:
           command: yarn build
       - run:
           name: Test
-          command: echo done!
+          command: yarn test
       - save_cache:
           key: repo-{{ .Environment.CIRCLE_SHA1 }}
           paths: ~/project
