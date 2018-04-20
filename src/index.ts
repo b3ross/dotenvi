@@ -30,8 +30,7 @@ try {
 
   const errors = validateDocument(document);
   if (errors.length) {
-    throw new Error(`Validation errors found while loading document.  Did you forget to specify -s?:
-${JSON.stringify(errors, undefined, 2)}`);
+    throw new Error(`Validation errors found while loading document.  Did you forget to specify -s?: \n${errors.join("\n")}`);
   }
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
