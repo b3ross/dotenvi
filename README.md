@@ -46,6 +46,11 @@ Then, run `yarn dotenvi -s <stage>` to generate a `.env` file for the stage desi
 Note that stages are not required in your yaml file - you can also define it without stages, in which case you should not specify a stage with the `-s` option when you run `dotenvi`.
 
 
+## Configuration
+
+Note that any AWS references (cred, cft, etc...) are currently hard-coded to us-east-1.
+
+
 ## Discussion
 
 The main design goals of dotenvi are as follows:
