@@ -5,8 +5,12 @@ const { resolvers } = require('./resolvers');
 describe('Rewriter', () => {
   it('Rewrites constants', () => {
     const document = {
-      'explicit': '${constant:hello}',
-      'implicit': 'hello'
+      'explicit': {
+        'value': '${constant:hello}'
+      },
+      'implicit': {
+        'value': 'hello'
+      }
     };
 
     const rewriter = new Rewriter(resolvers);
@@ -18,7 +22,9 @@ describe('Rewriter', () => {
   it('Rewrites environment variables', () => {
     process.env['TEST'] = 'hello';
     const document = {
-      'test': '${env:TEST}'
+      'test': {
+        'value': '${env:TEST}'
+      }
     };
 
     const rewriter = new Rewriter(resolvers);
