@@ -17,10 +17,7 @@
     "dotenvi": "dist/index.js"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "js"],
     "transform": {
       "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
     },
@@ -30,6 +27,8 @@
     "testEnvironment": "node",
     "coverageDirectory": "./coverage",
     "collectCoverage": true
+    "testMatch": ["**/*.test.(ts|js)"],
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
@@ -38,34 +37,26 @@
     "@types/node": "^9.6.4",
     "argparse": "^1.0.10",
     "aws-sdk": "^2.224.1",
-    "jest": "^22.4.3",
     "js-yaml": "^3.11.0",
-    "nodecredstash": "^2.0.2",
-    "ts-jest": "^22.4.4",
-    "typescript": "^2.8.1"
+    "nodecredstash": "^2.0.2"
   },
   "devDependencies": {
+    "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
     "prettier": "^1.12.0",
     "semantic-release": "^15.1.7",
     "semantic-release-cli": "^3.6.6",
-    "ts-node": "^5.0.1"
+    "ts-jest": "^22.4.4",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/b3ross/dotenvi.git"
   },
-  "keywords": [
-    "dotenv",
-    "yaml",
-    "config",
-    "environment"
-  ],
+  "keywords": ["dotenv", "yaml", "config", "environment"],
   "lint-staged": {
-    "*.{ts,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{ts,json}": ["prettier --write", "git add"]
   },
   "prettier": {
     "printWidth": 120,
