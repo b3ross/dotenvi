@@ -26,7 +26,7 @@
     ],
     "testEnvironment": "node",
     "coverageDirectory": "./coverage",
-    "collectCoverage": true
+    "collectCoverage": true,
     "testMatch": ["**/*.test.(ts|js)"],
     "testEnvironment": "node"
   },
