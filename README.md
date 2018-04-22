@@ -29,6 +29,9 @@ default_env: &default_env
   SOME_ENV_VARIABLE: ${env:SOME_ENV_VARIABLE}  ## Reference to an external environment variable
   SOME_CREDSTASH_VARIABLE: ${cred:SOME_CREDSTASH_VARIABLE}  ## Reference to a credstash key
   SOME_CONSTANT: SOME_CONSTANT
+  OPTIONAL_VARIABLE:  ## Optional variable syntax.  Undefined variables will otherwise cause failures
+    value: ${env:SOME_POSSIBLY_UNDEFINED_VARIABLE}
+    optional: true
 
 development:
   <<: *default_env
