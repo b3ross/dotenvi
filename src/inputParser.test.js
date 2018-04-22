@@ -36,6 +36,35 @@ development:
     }).toThrow();
   });
 
+
+  it('Parses invalid document with bad stage', () => {
+    const contents = `
+development:
+  CONSTANT: constant
+  OPTIONAL:
+    value: constant
+    optional: true
+`;
+
+    expect(() => {
+      const parsed = parse(contents, 'nope');
+    }).toThrow();
+  });
+
+  it('Parses invalid document with no stage', () => {
+    const contents = `
+development:
+  CONSTANT: constant
+  OPTIONAL:
+    vlaue: constant
+    optional: true
+`;
+
+    expect(() => {
+      const parsed = parse(contents);
+    }).toThrow();
+  });
+
   it('Parses bad yaml', () => {
     const contents = `
 development::: this is bad`;
