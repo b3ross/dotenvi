@@ -2,8 +2,8 @@ import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 import { InputDocument } from './types';
 
-export function read(stage?: string): InputDocument {
-  let document = yaml.safeLoad(fs.readFileSync('./env.yml', 'utf8')) as any;
+export function parse(contents: string, stage?: string): InputDocument {
+  let document = yaml.safeLoad(contents) as any;
   if (stage) {
     document = (document as any)[stage];
     if (!document) {

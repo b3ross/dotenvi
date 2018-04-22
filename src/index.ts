@@ -7,7 +7,7 @@ import { Rewriter } from './rewriter';
 import { ResolverMap, Document, InputDocument } from './types';
 import { resolvers } from './resolvers';
 import { writeFile, validateOutput } from './utils';
-import { read } from './yamlReader';
+import { parse } from './yamlReader';
 
 const parser = new ArgumentParser();
 parser.addArgument(['-s', '--stage'], {
@@ -20,7 +20,8 @@ const args = parser.parseArgs();
 let document: InputDocument;
 try {
   // TODO Load external resolvers
-  document = read(args.stage);
+  const contents = fs.readFileSync('env.yml', 'utf8')
+  document = parse(contents, args.stage);
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
   process.exit(1);
