@@ -1,13 +1,13 @@
-import { ResolverMap, Document } from './types';
+import { ResolverMap, Document, InputDocument } from './types';
 
 export class Rewriter {
   constructor(private resolvers: ResolverMap) { }
 
-  async rewrite(document: Document): Promise<Document> {
+  async rewrite(document: InputDocument): Promise<Document> {
     const variables = Object.keys(document);
     const result: Document = {};
     for (const variable of variables) {
-      const value = document[variable];
+      const value = document[variable].value;
       result[variable] = await this.rewriteValue(value);
     }
     return result;

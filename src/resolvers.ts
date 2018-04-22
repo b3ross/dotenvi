@@ -33,9 +33,13 @@ export const resolvers: ResolverMap = {
         return output.OutputValue;
       }
     }
-    throw new Error(`Could not locate output ${parsedArgument[1]} of stack ${parsedArgument[0]}`);
+    console.warn(`Could not locate output ${parsedArgument[1]} of stack ${parsedArgument[0]}`);
+    return undefined;
   },
   env: async (argument: string) => {
+    if (!process.env[argument]) {
+      console.warn(`Environment variable ${argument} is undefined`);
+    }
     return process.env[argument];
   },
   constant: async (argument: string) => {
@@ -45,8 +49,9 @@ export const resolvers: ResolverMap = {
     const credstash = new Credstash({ awsOpts: { region: 'us-east-1' } });
     const promisified = promisify(credstash.getSecret);
     return promisified({ name: argument })
-      .catch((error: Error) => {
-        throw new Error(`Could not load value ${argument} from credstash: ${error.stack}`);
+      .catch((error: Error): string => {
+        console.warn(`Could not load value ${argument} from credstash: ${error}`);
+        return undefined;
       });
   }
 };

@@ -1,13 +1,13 @@
 #! /usr/bin/env node
 
-import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 import { ArgumentParser } from 'argparse';
 
 import { Rewriter } from './rewriter';
-import { ResolverMap, Document } from './types';
+import { ResolverMap, Document, InputDocument } from './types';
 import { resolvers } from './resolvers';
-import { validateDocument, writeFile } from './utils';
+import { writeFile, validateOutput } from './utils';
+import { read } from './yamlReader';
 
 const parser = new ArgumentParser();
 parser.addArgument(['-s', '--stage'], {
@@ -17,27 +17,20 @@ parser.addArgument(['-s', '--stage'], {
 const args = parser.parseArgs();
 
 
-let document;
+let document: InputDocument;
 try {
   // TODO Load external resolvers
-  document = yaml.safeLoad(fs.readFileSync('./env.yml', 'utf8')) as Document;
-  if (args.stage) {
-    document = (document as any)[args.stage];
-    if (!document) {
-      throw new Error(`Could not locate stage ${args.stage} in file ${args.file}`);
-    }
-  }
-
-  const errors = validateDocument(document);
-  if (errors.length) {
-    throw new Error(`Validation errors found while loading document.  Did you forget to specify -s?: \n${errors.join("\n")}`);
-  }
+  document = read(args.stage);
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
   process.exit(1);
 }
 const rewriter = new Rewriter(resolvers);
 rewriter.rewrite(document).then(result => {
+  const errors = validateOutput(document, result);
+  if (errors.length) {
+    throw new Error(`Validation errors found in result:\n${errors.join("\n")}`);
+  }
   console.info(`Writing .env file to ${process.cwd()}/.env`);
   writeFile(result);
 }).catch((error: Error) => {
