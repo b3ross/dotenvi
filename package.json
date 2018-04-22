@@ -21,6 +21,12 @@
     "transform": {
       "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
     },
+    "testMatch": [
+      "**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage",
+    "collectCoverage": true,
     "testMatch": ["**/*.test.(ts|js)"],
     "testEnvironment": "node"
   },
