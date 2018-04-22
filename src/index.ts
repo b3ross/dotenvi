@@ -7,7 +7,7 @@ import { Rewriter } from './rewriter';
 import { ResolverMap, Document, InputDocument } from './types';
 import { resolvers } from './resolvers';
 import { writeFile, validateOutput } from './utils';
-import { parse } from './yamlReader';
+import { parse } from './inputParser';
 
 const parser = new ArgumentParser();
 parser.addArgument(['-s', '--stage'], {
