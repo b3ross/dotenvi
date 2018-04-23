@@ -51,7 +51,7 @@ Note that stages are not required in your yaml file - you can also define it wit
 
 ## Configuration
 
-In order to override default configuration, you configure dotenvi via a `env.js` located next to your `env.yml`.  The format of this file is as follows:
+In order to override default configuration, you can supply a `env.js` located next to your `env.yml`.  The format of this file is as follows:
 
 ```javascript
 {
