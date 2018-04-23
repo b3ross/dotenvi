@@ -13,7 +13,7 @@ describe('Rewriter', () => {
       }
     };
 
-    const rewriter = new Rewriter(resolvers);
+    const rewriter = new Rewriter({ resolvers: resolvers });
     return rewriter.rewrite(document).then((output) => {
       expect(output['explicit']).toBe(output['implicit']);
     });
@@ -27,7 +27,7 @@ describe('Rewriter', () => {
       }
     };
 
-    const rewriter = new Rewriter(resolvers);
+    const rewriter = new Rewriter({ resolvers: resolvers });
     return rewriter.rewrite(document).then((output) => {
       expect(output['test']).toBe('hello');
     });
