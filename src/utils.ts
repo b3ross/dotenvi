@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import { deserialize } from 'class-transformer';
 
 import { Document, InputDocument, Config } from './types';
 import { resolvers } from './resolvers';
