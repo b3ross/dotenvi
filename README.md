@@ -51,8 +51,21 @@ Note that stages are not required in your yaml file - you can also define it wit
 
 ## Configuration
 
-Note that any AWS references (cred, cft, etc...) are currently hard-coded to us-east-1.
+In order to override default configuration, you can supply a `env.js` located next to your `env.yml`.  The format of this file is as follows:
 
+```javascript
+{
+  awsRegion: '<aws-region>',
+  resolvers: {
+    test: value => {
+      // transformation
+      return transformed-value; // or promise
+    }
+  }
+}
+```
+
+Resolvers specified in this file will allow you to expand on the current set of resolvers included in dotenvi (e.g., `env`, `cft`, etc...).  In the above example, the resolver `test` will match all references that look like `${test:some-value}`.
 
 ## Discussion
 
@@ -70,7 +83,6 @@ The reference syntax used in `env.yml` is inspired by [serverless](https://githu
 
 ## Possible Future Work
 
-1. Support for user-defined resolvers (e.g., other than `cft` and `env`).
-2. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
-3. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
-4. Support recursive reference calls (e.g., `${env:${env:FOO}}`)
+1. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
+2. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
+3. Support recursive reference calls (e.g., `${env:${env:FOO}}`)

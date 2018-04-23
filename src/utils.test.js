@@ -33,7 +33,7 @@ describe('validateOutput', () => {
   it('Does not error if output null and optional', () => {
     const input = {
       'environment': {
-        value: '${env:this_should_not_be_defined',
+        value: '${env:this_should_not_be_defined}',
         optional: true
       }
     };
