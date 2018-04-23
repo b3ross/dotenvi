@@ -17,7 +17,10 @@
     "dotenvi": "dist/index.js"
   },
   "jest": {
-    "moduleFileExtensions": ["ts", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
     "transform": {
       "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
     },
@@ -26,9 +29,7 @@
     ],
     "testEnvironment": "node",
     "coverageDirectory": "./coverage",
-    "collectCoverage": true,
-    "testMatch": ["**/*.test.(ts|js)"],
-    "testEnvironment": "node"
+    "collectCoverage": true
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
@@ -54,9 +55,17 @@
     "type": "git",
     "url": "https://github.com/b3ross/dotenvi.git"
   },
-  "keywords": ["dotenv", "yaml", "config", "environment"],
+  "keywords": [
+    "dotenv",
+    "yaml",
+    "config",
+    "environment"
+  ],
   "lint-staged": {
-    "*.{ts,json}": ["prettier --write", "git add"]
+    "*.{ts,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "printWidth": 120,

@@ -1,7 +1,7 @@
-import { ResolverMap, Document, InputDocument } from './types';
+import { Document, InputDocument, Config } from './types';
 
 export class Rewriter {
-  constructor(private resolvers: ResolverMap) { }
+  constructor(private config: Config) { }
 
   async rewrite(document: InputDocument): Promise<Document> {
     const variables = Object.keys(document);
@@ -22,14 +22,14 @@ export class Rewriter {
     if (!resolver) {
       throw new Error(`Could not locate resolver for value ${value}`);
     }
-    const result = await resolver(innerValue);
+    const result = await resolver(innerValue, this.config);
     return result;
   }
 
   private getResolver(name: string) {
     if (!name) {
-      return this.resolvers['constant'];
+      return this.config.resolvers['constant'];
     }
-    return this.resolvers[name];
+    return this.config.resolvers[name];
   }
 }

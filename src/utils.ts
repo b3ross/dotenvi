@@ -1,5 +1,8 @@
 import * as fs from 'fs';
-import { Document, InputDocument } from './types';
+import { deserialize } from 'class-transformer';
+
+import { Document, InputDocument, Config } from './types';
+import { resolvers } from './resolvers';
 
 export function writeFile(document: { [name: string]: string }) {
   let output = '';
@@ -24,4 +27,18 @@ export function validateOutput(input: InputDocument, output: Document): string[]
     }
   }
   return errors;
+}
+
+
+export function loadConfig(): Config {
+  let config: Config = new Config();
+  if (fs.existsSync(`./env.js`)) {
+    console.info(`Loading configuration from ${process.cwd()}/env.js`);
+    config = require(`${process.cwd()}/env`) as Config;
+    if (!config.resolvers) {
+      config.resolvers = {};
+    }
+  }
+  config.resolvers = Object.assign({}, config.resolvers, resolvers);
+  return config;
 }

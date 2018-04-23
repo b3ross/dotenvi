@@ -51,8 +51,21 @@ Note that stages are not required in your yaml file - you can also define it wit
 
 ## Configuration
 
-Note that any AWS references (cred, cft, etc...) are currently hard-coded to us-east-1.
+In order to override default configuration, you configure dotenvi via a `env.js` located next to your `env.yml`.  The format of this file is as follows:
 
+```javascript
+{
+  awsRegion: '<aws-region>',
+  resolvers: {
+    test: value => {
+      // transformation
+      return transformed-value; // or promise
+    }
+  }
+}
+```
+
+Resolvers specified in this file will allow you to expand on the current set of resolvers included in dotenvi.
 
 ## Discussion
 

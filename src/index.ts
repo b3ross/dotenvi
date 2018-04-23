@@ -6,7 +6,7 @@ import { ArgumentParser } from 'argparse';
 import { Rewriter } from './rewriter';
 import { ResolverMap, Document, InputDocument } from './types';
 import { resolvers } from './resolvers';
-import { writeFile, validateOutput } from './utils';
+import { writeFile, validateOutput, loadConfig } from './utils';
 import { parse } from './inputParser';
 
 const parser = new ArgumentParser();
@@ -14,19 +14,20 @@ parser.addArgument(['-s', '--stage'], {
   help: 'Environment stage',
   dest: 'stage'
 });
-const args = parser.parseArgs();
 
+const args = parser.parseArgs();
+const config = loadConfig();
 
 let document: InputDocument;
 try {
-  // TODO Load external resolvers
   const contents = fs.readFileSync('env.yml', 'utf8')
   document = parse(contents, args.stage);
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
   process.exit(1);
 }
-const rewriter = new Rewriter(resolvers);
+
+const rewriter = new Rewriter(config);
 rewriter.rewrite(document).then(result => {
   const errors = validateOutput(document, result);
   if (errors.length) {
