@@ -65,7 +65,7 @@ In order to override default configuration, you can supply a `env.js` located ne
 }
 ```
 
-Resolvers specified in this file will allow you to expand on the current set of resolvers included in dotenvi.  In the above example, the resolver 'test' will match all references that look like ${test:<some-value>}.
+Resolvers specified in this file will allow you to expand on the current set of resolvers included in dotenvi.  In the above example, the resolver `test` will match all references that look like `${test:some-value}`.
 
 ## Discussion
 
