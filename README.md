@@ -83,7 +83,6 @@ The reference syntax used in `env.yml` is inspired by [serverless](https://githu
 
 ## Possible Future Work
 
-1. Support for user-defined resolvers (e.g., other than `cft` and `env`).
-2. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
-3. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
-4. Support recursive reference calls (e.g., `${env:${env:FOO}}`)
+1. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
+2. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
+3. Support recursive reference calls (e.g., `${env:${env:FOO}}`)
