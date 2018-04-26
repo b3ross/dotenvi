@@ -34,10 +34,12 @@
   "dependencies": {
     "@types/argparse": "^1.0.33",
     "@types/aws-sdk": "^2.7.0",
+    "@types/bluebird": "^3.5.20",
     "@types/js-yaml": "^3.11.1",
     "@types/node": "^9.6.4",
     "argparse": "^1.0.10",
     "aws-sdk": "^2.224.1",
+    "bluebird": "^3.5.1",
     "js-yaml": "^3.11.0",
     "nodecredstash": "^2.0.2"
   },

@@ -1,8 +1,10 @@
 import * as AWS from 'aws-sdk';
 import { CloudFormation } from 'aws-sdk';
 import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
-import { promisify } from 'util';
+
 const Credstash = require('nodecredstash');
+
+import { promisify } from 'bluebird';
 
 import { ResolverMap, Config } from './types';
 
@@ -47,7 +49,7 @@ export const resolvers: ResolverMap = {
   },
   cred: async (argument: string, config: Config) => {
     const credstash = new Credstash({ awsOpts: { region: config.awsRegion } });
-    const promisified = promisify(credstash.getSecret);
+    const promisified = promisify<string, object>(credstash.getSecret, { context: credstash });
     return promisified({ name: argument })
       .catch((error: Error): string => {
         console.warn(`Could not load value ${argument} from credstash: ${error}`);
