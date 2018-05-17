@@ -15,6 +15,11 @@ parser.addArgument(['-s', '--stage'], {
   dest: 'stage'
 });
 
+parser.addArgument(['-o', '--output-dir'], {
+  help: 'Output directory of .env',
+  dest: 'outputdir'
+});
+
 const args = parser.parseArgs();
 const config = loadConfig();
 
