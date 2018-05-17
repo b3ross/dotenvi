@@ -17,7 +17,7 @@ export function writeFile(document: { [name: string]: string }, outputdir?: stri
     filename = path.join(outputdir, filename);
   }
 
-  fs.writeFileSync('.env', output);
+  fs.writeFileSync(filename, output);
 }
 
 
