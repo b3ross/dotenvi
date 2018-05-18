@@ -17,7 +17,8 @@ parser.addArgument(['-s', '--stage'], {
 
 parser.addArgument(['-o', '--output-dir'], {
   help: 'Output directory of .env',
-  dest: 'outputdir'
+  dest: 'outputdir',
+  defaultValue: process.cwd()
 });
 
 const args = parser.parseArgs();
@@ -38,8 +39,8 @@ rewriter.rewrite(document).then(result => {
   if (errors.length) {
     throw new Error(`Validation errors found in result:\n${errors.join("\n")}`);
   }
-  console.info(`Writing .env file to ${process.cwd()}/.env`);
-  writeFile(result);
+  console.info(`Writing .env file to ${args.outputdir}/.env`);
+  writeFile(result, args.outputdir);
 }).catch((error: Error) => {
   console.error(`Could not write .env file: ${error.stack}`);
   process.exit(1);
