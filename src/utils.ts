@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import { Document, InputDocument, Config } from './types';
 import { resolvers } from './resolvers';
 
-export function writeFile(document: { [name: string]: string }) {
+export function writeFile(document: Document) {
   let output = '';
   const keys = Object.keys(document);
   for (const key of keys) {

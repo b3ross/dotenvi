@@ -1,4 +1,4 @@
-import { Document, InputDocument, Config } from './types';
+import { Document, InputDocument, Config, Primitive } from './types';
 
 export class Rewriter {
   constructor(private config: Config) { }
@@ -13,17 +13,21 @@ export class Rewriter {
     return result;
   }
 
-  private async rewriteValue(value: string): Promise<string> {
-    const regex = new RegExp('\\${([a-z]+):(.*)}');
-    const results = value.match(regex);
-    const resolverName = results && results[1];
-    const innerValue = results ? results[2] : value;
-    const resolver = this.getResolver(resolverName);
-    if (!resolver) {
-      throw new Error(`Could not locate resolver for value ${value}`);
+  private async rewriteValue(value: Primitive): Promise<Primitive> {
+    if (typeof value === 'string') {
+      const regex = new RegExp('\\${([a-z]+):(.*)}');
+      const results = value.match(regex);
+      const resolverName = results && results[1];
+      const innerValue = results ? results[2] : value;
+      const resolver = this.getResolver(resolverName);
+      if (!resolver) {
+        throw new Error(`Could not locate resolver for value ${value}`);
+      }
+      const result = await resolver(innerValue, this.config);
+      return result;
+    } else {
+      return value;
     }
-    const result = await resolver(innerValue, this.config);
-    return result;
   }
 
   private getResolver(name: string) {
