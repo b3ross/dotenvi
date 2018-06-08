@@ -14,7 +14,7 @@ export function parse(contents: string, stage?: string): InputDocument {
   const keys = Object.keys(document);
   for (const key of keys) {
     const value = document[key];
-    if (typeof value === 'string') {
+    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
       result[key] = { value: value };
     } else if (value.optional && value.value) {
       result[key] = {
