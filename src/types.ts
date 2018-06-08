@@ -2,11 +2,13 @@ export type ResolverFunction = (arg: string, config: Config) => Promise<string>;
 export type ResolverMap = {
   [name: string]: ResolverFunction
 };
-export type Document = { [name: string]: string }
+
+export type Primitive = string | number | boolean;
+export type Document = { [name: string]: Primitive }
 
 export class InputDocument {
   [name: string]: {
-    value: string;
+    value: Primitive;
     optional?: boolean
   }
 }
