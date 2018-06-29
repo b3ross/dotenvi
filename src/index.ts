@@ -20,6 +20,12 @@ parser.addArgument(['-f', '--file'], {
   defaultValue: 'env.yml'
 });
 
+parser.addArgument(['-o', '--output-dir'], {
+  help: 'Output directory of .env',
+  dest: 'outputdir',
+  defaultValue: process.cwd()
+});
+
 const args = parser.parseArgs();
 const config = loadConfig();
 
@@ -38,8 +44,8 @@ rewriter.rewrite(document).then(result => {
   if (errors.length) {
     throw new Error(`Validation errors found in result:\n${errors.join("\n")}`);
   }
-  console.info(`Writing .env file to ${process.cwd()}/.env`);
-  writeFile(result);
+  console.info(`Writing .env file to ${args.outputdir}/.env`);
+  writeFile(result, args.outputdir);
 }).catch((error: Error) => {
   console.error(`Could not write .env file: ${error.stack}`);
   process.exit(1);

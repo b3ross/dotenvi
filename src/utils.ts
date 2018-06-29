@@ -1,9 +1,10 @@
 import * as fs from 'fs';
+import * as path from 'path';
 
 import { Document, InputDocument, Config } from './types';
 import { resolvers } from './resolvers';
 
-export function writeFile(document: Document) {
+export function writeFile(document: Document, outputdir?: string) {
   let output = '';
   const keys = Object.keys(document);
   for (const key of keys) {
@@ -11,7 +12,12 @@ export function writeFile(document: Document) {
       output += `${key}=${document[key]}\n`;
     }
   }
-  fs.writeFileSync('.env', output);
+  let filename = '.env';
+  if (outputdir) {
+    filename = path.join(outputdir, filename);
+  }
+
+  fs.writeFileSync(filename, output);
 }
 
 
