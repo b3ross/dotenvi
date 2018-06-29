@@ -14,6 +14,11 @@ parser.addArgument(['-s', '--stage'], {
   help: 'Environment stage',
   dest: 'stage'
 });
+parser.addArgument(['-f', '--file'], {
+  help: 'Path to env.yml',
+  dest: 'file',
+  defaultValue: 'env.yml'
+});
 
 parser.addArgument(['-o', '--output-dir'], {
   help: 'Output directory of .env',
@@ -26,7 +31,7 @@ const config = loadConfig();
 
 let document: InputDocument;
 try {
-  const contents = fs.readFileSync('env.yml', 'utf8')
+  const contents = fs.readFileSync(args.file, 'utf8')
   document = parse(contents, args.stage);
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
