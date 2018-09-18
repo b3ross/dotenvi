@@ -21,13 +21,15 @@ export const resolvers: ResolverMap = {
     try {
       stack = await cft.describeStacks({ StackName: parsedArgument[0] }).promise();
     } catch (e) {
-      throw new Error(
+      console.warn(
         `Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`
       );
+      return undefined;
     }
     if (stack.Stacks.length == 0) {
-      throw new Error(
+      console.warn(
         `Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
+      return undefined;
     }
 
     for (const output of stack.Stacks[0].Outputs) {
