@@ -47,7 +47,7 @@ describe('Rewriter', () => {
     });
   });
 
-  it("Doesn't rewrite when surrounding expression returns undefined", () => {
+  it("Doesn't rewrite when inner expression returns undefined", () => {
     const document = {
       'test': {
         'value': 'test-${env:UNDEFINED_ENV_VARIABLE}-test'
