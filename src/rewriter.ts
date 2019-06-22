@@ -15,18 +15,34 @@ export class Rewriter {
 
   private async rewriteValue(value: Primitive): Promise<Primitive> {
     if (typeof value === 'string') {
-      const regex = new RegExp('([^$]*)\\${([a-z]+):(.*)}(.*)');
-      const matchResults = value.match(regex);
-      const resolverName = matchResults && matchResults[2];
-      const innerValue = matchResults ? matchResults[3] : value;
-      const resolver = this.getResolver(resolverName);
-      if (!resolver) {
-        throw new Error(`Could not locate resolver for value ${value}`);
-      }
-      let result = await resolver(innerValue, this.config);
-      // If there are surrounding strings, only rewrite if result is non-null
-      if (result && matchResults) {
-        result = matchResults[1] + result + matchResults[4]
+      let result = '';
+      let capture = '';
+
+      for (let i = 0; i < value.length; ++i) {
+        const c = value.charAt(i);
+        if (c === '$') {
+          capture += c;
+        } else if (c == '}') {
+          capture += c;
+          const regex = new RegExp('\\${([a-z]+):(.*)}');
+          const matchResults = capture.match(regex);
+          const resolverName = matchResults && matchResults[1];
+          const resolver = this.getResolver(resolverName);
+          if (!resolver) {
+            throw new Error(`Could not locate resolver for value ${value}`);
+          }
+          const innerValue = matchResults ? matchResults[2] : value;
+          let innerResult = await resolver(innerValue, this.config);
+          if (!innerResult) {
+            throw new Error(`Resolver ${resolverName} didn't return any value`);
+          }
+          result += await this.rewriteValue(innerResult);
+          capture = '';
+        } else if (capture) {
+          capture += c;
+        } else {
+          result += c;
+        }
       }
       return result;
     } else {
