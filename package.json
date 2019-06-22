@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "@types/argparse": "^1.0.33",
-    "@types/aws-sdk": "^2.7.0",
     "@types/bluebird": "^3.5.20",
     "@types/js-yaml": "^3.11.1",
     "@types/node": "^9.6.4",
