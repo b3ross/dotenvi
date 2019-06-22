@@ -33,4 +33,30 @@ describe('Rewriter', () => {
     });
   });
 
+  it('Rewrites variables with surrounding strings', () => {
+    process.env['TEST'] = 'hello';
+    const document = {
+      'test': {
+        'value': 'test-${env:TEST}-test'
+      }
+    };
+
+    const rewriter = new Rewriter({ resolvers: resolvers });
+    return rewriter.rewrite(document).then((output) => {
+      expect(output['test']).toBe('test-hello-test');
+    });
+  });
+
+  it("Doesn't rewrite when surrounding expression returns undefined", () => {
+    const document = {
+      'test': {
+        'value': 'test-${env:UNDEFINED_ENV_VARIABLE}-test'
+      }
+    };
+
+    const rewriter = new Rewriter({ resolvers: resolvers });
+    return rewriter.rewrite(document).then((output) => {
+      expect(output['test']).toBe(undefined);
+    });
+  })
 });

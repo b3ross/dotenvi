@@ -15,15 +15,19 @@ export class Rewriter {
 
   private async rewriteValue(value: Primitive): Promise<Primitive> {
     if (typeof value === 'string') {
-      const regex = new RegExp('\\${([a-z]+):(.*)}');
-      const results = value.match(regex);
-      const resolverName = results && results[1];
-      const innerValue = results ? results[2] : value;
+      const regex = new RegExp('([^$]*)\\${([a-z]+):(.*)}(.*)');
+      const matchResults = value.match(regex);
+      const resolverName = matchResults && matchResults[2];
+      const innerValue = matchResults ? matchResults[3] : value;
       const resolver = this.getResolver(resolverName);
       if (!resolver) {
         throw new Error(`Could not locate resolver for value ${value}`);
       }
-      const result = await resolver(innerValue, this.config);
+      let result = await resolver(innerValue, this.config);
+      // If there are surrounding strings, only rewrite if result is non-null
+      if (result && matchResults) {
+        result = matchResults[1] + result + matchResults[4]
+      }
       return result;
     } else {
       return value;
