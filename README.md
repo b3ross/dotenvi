@@ -95,4 +95,3 @@ The reference syntax used in `env.yml` is inspired by [serverless](https://githu
 ## Possible Future Work
 
 1. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
-2. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
