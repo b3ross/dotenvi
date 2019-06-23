@@ -32,6 +32,7 @@ default_env: &default_env
   OPTIONAL_VARIABLE:  ## Optional variable syntax.  Undefined variables will otherwise cause failures
     value: ${env:SOME_POSSIBLY_UNDEFINED_VARIABLE}
     optional: true
+  ADVANCED_VALUE:  test-${env:SOME_ENV_VARIABLE}
 
 development:
   <<: *default_env
@@ -48,6 +49,16 @@ Then, run `yarn dotenvi -s <stage>` to generate a `.env` file for the stage desi
 
 Note that stages are not required in your yaml file - you can also define it without stages, in which case you should not specify a stage with the `-s` option when you run `dotenvi`.
 
+
+## Recursion
+
+Dotenvi now supports recursion.  You can specify an expression that returns another expression.  For example, if the following environment variables are defined:
+
+* `RECURSIVE_OUTER`: `${env:RECURSIVE_MIDDLE}-test`
+* `RECURSIVE_MIDDLE`: `foo${env:RECURSIVE_INNER}bar${env:RECURSIVE_INNER}`
+* `RECURSIVE_INNER`: `test`
+
+If you evaluate `${env:RECURSIVE_OUTER}`, it will return `footestbartest-test`.
 
 ## Configuration
 
@@ -84,5 +95,3 @@ The reference syntax used in `env.yml` is inspired by [serverless](https://githu
 ## Possible Future Work
 
 1. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
-2. Support for references embedded within a configuration value (e.g., `foo-${env:BAR}` --> `foo-bar` if BAR=bar)
-3. Support recursive reference calls (e.g., `${env:${env:FOO}}`)
