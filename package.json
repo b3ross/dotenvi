@@ -12,7 +12,7 @@
     "test": "yarn jest",
     "precommit": "lint-staged",
     "release": "semantic-release",
-    "acceptance-test": "pushd example && IA_ENV=test node ../dist/index.js -f env.yml -s development && popd"
+    "example": "pushd example && IA_ENV=test node ../dist/index.js -f env.yml -s development && popd"
   },
   "bin": {
     "dotenvi": "dist/index.js"
