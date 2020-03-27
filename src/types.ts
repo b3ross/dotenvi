@@ -16,7 +16,7 @@ export class InputDocument {
 export class Config {
   constructor() {
     this.resolvers = {};
-    this.awsRegion = 'us-east-1';
+    this.awsRegion = process.env.AWS_REGION || 'us-east-1';
   }
   awsRegion: string;
   resolvers: ResolverMap;

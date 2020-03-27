@@ -53,5 +53,40 @@ export const resolvers: ResolverMap = {
       console.warn(`Could not load value ${argument} from credstash: ${error}`);
       return undefined;
     });
+  },
+  aws: async (argument: string) => {
+    const params = argument.split('.');
+    const [secretKey, additonalValue] = params;
+
+    if (!secretKey) {
+      console.warn('No key provided to aws secret manager resolver');
+      return undefined;
+    }
+
+    const client = new AWS.SecretsManager();
+
+    try {
+      const { SecretString } = await client
+        .getSecretValue({ SecretId: secretKey })
+        .promise();
+
+      if (additonalValue) {
+        const parseJson = JSON.parse(SecretString);
+
+        const lookupSecretValue = parseJson[additonalValue];
+
+        if (!lookupSecretValue) {
+          console.warn(`No aws secret manager value found for ${secretKey}.${additonalValue}`);
+          return undefined;
+        }
+
+        return lookupSecretValue;
+      }
+
+      return SecretString;
+    } catch (e) {
+      console.warn(`Invalid key passed to secret manager ${secretKey}`);
+      return undefined;
+    }
   }
 };
