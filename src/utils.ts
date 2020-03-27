@@ -20,7 +20,6 @@ export function writeFile(document: Document, outputdir?: string) {
   fs.writeFileSync(filename, output);
 }
 
-
 export function validateOutput(input: InputDocument, output: Document): string[] {
   const errors = [];
   const keys = Object.keys(input);
@@ -33,7 +32,6 @@ export function validateOutput(input: InputDocument, output: Document): string[]
   }
   return errors;
 }
-
 
 export function loadConfig(): Config {
   let config: Config = new Config();

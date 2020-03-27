@@ -36,7 +36,6 @@ development:
     }).toThrow();
   });
 
-
   it('Parses invalid document with bad stage', () => {
     const contents = `
 development:

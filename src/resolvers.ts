@@ -8,10 +8,8 @@ import { promisify } from 'bluebird';
 
 import { ResolverMap, Config } from './types';
 
-
 export const resolvers: ResolverMap = {
   cft: async (argument: string, config: Config) => {
-
     if (!AWS.config.region) {
       AWS.config.update({ region: config.awsRegion });
     }
@@ -27,8 +25,7 @@ export const resolvers: ResolverMap = {
       return undefined;
     }
     if (stack.Stacks.length == 0) {
-      console.warn(
-        `Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
+      console.warn(`Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
       return undefined;
     }
 
@@ -52,10 +49,9 @@ export const resolvers: ResolverMap = {
   cred: async (argument: string, config: Config) => {
     const credstash = new Credstash({ awsOpts: { region: config.awsRegion } });
     const promisified = promisify<string, object>(credstash.getSecret, { context: credstash });
-    return promisified({ name: argument })
-      .catch((error: Error): string => {
-        console.warn(`Could not load value ${argument} from credstash: ${error}`);
-        return undefined;
-      });
+    return promisified({ name: argument }).catch((error: Error): string => {
+      console.warn(`Could not load value ${argument} from credstash: ${error}`);
+      return undefined;
+    });
   }
 };
