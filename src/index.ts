@@ -31,7 +31,7 @@ const config = loadConfig();
 
 let document: InputDocument;
 try {
-  const contents = fs.readFileSync(args.file, 'utf8')
+  const contents = fs.readFileSync(args.file, 'utf8');
   document = parse(contents, args.stage);
 } catch (error) {
   console.error(`Could not load yaml ${error.stack}`);
@@ -39,14 +39,17 @@ try {
 }
 
 const rewriter = new Rewriter(config);
-rewriter.rewrite(document).then(result => {
-  const errors = validateOutput(document, result);
-  if (errors.length) {
-    throw new Error(`Validation errors found in result:\n${errors.join("\n")}`);
-  }
-  console.info(`Writing .env file to ${args.outputdir}/.env`);
-  writeFile(result, args.outputdir);
-}).catch((error: Error) => {
-  console.error(`Could not write .env file: ${error.stack}`);
-  process.exit(1);
-});
+rewriter
+  .rewrite(document)
+  .then(result => {
+    const errors = validateOutput(document, result);
+    if (errors.length) {
+      throw new Error(`Validation errors found in result:\n${errors.join('\n')}`);
+    }
+    console.info(`Writing .env file to ${args.outputdir}/.env`);
+    writeFile(result, args.outputdir);
+  })
+  .catch((error: Error) => {
+    console.error(`Could not write .env file: ${error.stack}`);
+    process.exit(1);
+  });

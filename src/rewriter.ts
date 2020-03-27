@@ -1,7 +1,7 @@
 import { Document, InputDocument, Config, Primitive } from './types';
 
 export class Rewriter {
-  constructor(private config: Config) { }
+  constructor(private config: Config) {}
 
   async rewrite(document: InputDocument): Promise<Document> {
     const variables = Object.keys(document);
