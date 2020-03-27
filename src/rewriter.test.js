@@ -76,4 +76,18 @@ describe('Rewriter', () => {
       expect(output['test']).toBe('footestbartest-test');
     });
   });
+
+  it('Supports optionals', () => {
+    const document = {
+      test: {
+        value: '${env:OPTIONAL}',
+        optional: true
+      }
+    };
+
+    const rewriter = new Rewriter({ resolvers: resolvers });
+    return rewriter.rewrite(document).then(output => {
+      expect(output['test']).toBe('');
+    });
+  });
 });
