@@ -1,4 +1,5 @@
 import { Document, InputDocument, Config, Primitive } from './types';
+import { isNullOrUndefined } from 'util';
 
 export class Rewriter {
   constructor(private config: Config) {}
@@ -26,17 +27,21 @@ export class Rewriter {
           capture += c;
           const regex = new RegExp('\\${([a-z]+):(.*)}');
           const matchResults = capture.match(regex);
-          const resolverName = matchResults && matchResults[1];
-          const resolver = this.getResolver(resolverName);
-          if (!resolver) {
-            throw new Error(`Could not locate resolver for value ${value}`);
+          if (matchResults) {
+            const resolverName = matchResults[1];
+            const resolver = this.getResolver(resolverName);
+            if (!resolver) {
+              throw new Error(`Could not locate resolver for value ${value}`);
+            }
+            const argument = matchResults ? matchResults[2] : value;
+            let resolved = await resolver(argument, this.config);
+            const rewrittenValue = await this.rewriteValue(resolved);
+            if (!isNullOrUndefined(rewrittenValue)) {
+              result += rewrittenValue;
+            }
+          } else {
+            result += capture;
           }
-          const innerValue = matchResults ? matchResults[2] : value;
-          let innerResult = await resolver(innerValue, this.config);
-          if (!innerResult) {
-            throw new Error(`Resolver ${resolverName} didn't return any value`);
-          }
-          result += await this.rewriteValue(innerResult);
           capture = '';
         } else if (capture) {
           capture += c;

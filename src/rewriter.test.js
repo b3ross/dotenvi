@@ -76,4 +76,29 @@ describe('Rewriter', () => {
       expect(output['test']).toBe('footestbartest-test');
     });
   });
+
+  it("Doesn't blow up with bad references like ${FOO} or {FOO} or {FOO or FOO}", () => {
+    process.env['BAD_REFERENCE'] = 'BAD_REFERENCE';
+    const document = {
+      with_bang: {
+        value: '${FOO}'
+      },
+      without_bang: {
+        value: '{FOO}'
+      },
+      with_left_curly_only: {
+        value: '{FOO'
+      },
+      with_right_curly_only: {
+        value: 'FOO}'
+      }
+    };
+
+    const rewriter = new Rewriter({ resolvers: resolvers });
+    return rewriter.rewrite(document).then(output => {
+      for (key in document) {
+        expect(output[key]).toBe(document[key]['value']);
+      }
+    });
+  });
 });
