@@ -1,4 +1,5 @@
 import { Document, InputDocument, Config, Primitive } from './types';
+import { isNullOrUndefined } from 'util';
 
 export class Rewriter {
   constructor(private config: Config) {}
@@ -34,7 +35,7 @@ export class Rewriter {
           const argument = matchResults ? matchResults[2] : value;
           let resolved = await resolver(argument, this.config);
           const rewrittenValue = await this.rewriteValue(resolved);
-          if (rewrittenValue) {
+          if (!isNullOrUndefined(rewrittenValue)) {
             result += rewrittenValue;
           }
           capture = '';
