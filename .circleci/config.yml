@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 'circleci/node:13.5.0'
+      - image: 'circleci/node:10.3'
     steps:
       - checkout
       - run:
@@ -21,7 +21,7 @@ jobs:
 
   release:
     docker:
-      - image: 'circleci/node:13.5.0'
+      - image: 'circleci/node:10.3'
     steps:
       - restore_cache:
           name: Restore workspace cache
