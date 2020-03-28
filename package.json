@@ -40,7 +40,7 @@
     "argparse": "^1.0.10",
     "aws-sdk": "^2.224.1",
     "bluebird": "^3.5.1",
-    "js-yaml": "^3.11.0",
+    "js-yaml": "^3.13.1",
     "nodecredstash": "^2.0.2"
   },
   "devDependencies": {
