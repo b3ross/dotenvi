@@ -27,16 +27,20 @@ export class Rewriter {
           capture += c;
           const regex = new RegExp('\\${([a-z]+):(.*)}');
           const matchResults = capture.match(regex);
-          const resolverName = matchResults && matchResults[1];
-          const resolver = this.getResolver(resolverName);
-          if (!resolver) {
-            throw new Error(`Could not locate resolver for value ${value}`);
-          }
-          const argument = matchResults ? matchResults[2] : value;
-          let resolved = await resolver(argument, this.config);
-          const rewrittenValue = await this.rewriteValue(resolved);
-          if (!isNullOrUndefined(rewrittenValue)) {
-            result += rewrittenValue;
+          if (matchResults) {
+            const resolverName = matchResults[1];
+            const resolver = this.getResolver(resolverName);
+            if (!resolver) {
+              throw new Error(`Could not locate resolver for value ${value}`);
+            }
+            const argument = matchResults ? matchResults[2] : value;
+            let resolved = await resolver(argument, this.config);
+            const rewrittenValue = await this.rewriteValue(resolved);
+            if (!isNullOrUndefined(rewrittenValue)) {
+              result += rewrittenValue;
+            }
+          } else {
+            result += capture;
           }
           capture = '';
         } else if (capture) {
