@@ -94,10 +94,10 @@ describe('Rewriter', () => {
   it("Doesn't blow up with bad references like ${FOO} or {FOO} or {FOO or FOO}", () => {
     process.env['BAD_REFERENCE'] = 'BAD_REFERENCE';
     const document = {
-      with_bang: {
+      with_dollar: {
         value: '${FOO}'
       },
-      without_bang: {
+      without_dollar: {
         value: '{FOO}'
       },
       with_left_curly_only: {
