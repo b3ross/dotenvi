@@ -11,7 +11,8 @@
     "build": "yarn tsc",
     "test": "yarn jest",
     "precommit": "lint-staged",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "example": "pushd example && IA_ENV=example node ../dist/index.js -f env.yml -s development && popd"
   },
   "bin": {
     "dotenvi": "dist/index.js"
