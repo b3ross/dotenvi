@@ -25,7 +25,7 @@ export function validateOutput(input: InputDocument, output: Document): string[]
   const keys = Object.keys(input);
   for (const key of keys) {
     if (!input[key].optional) {
-      if (!(key in output) || output[key] === undefined) {
+      if (!(key in output) || output[key] === undefined || output[key] === '') {
         errors.push(`${key} is a required variable but is not specified in result`);
       }
     }
