@@ -10,7 +10,7 @@ class SecretsManagerMock {
 
   getSecretValue({ SecretId }) {
     if (SecretId.includes('invalid')) {
-      return Promise.reject('Invalid secret key');
+      throw new Error("Secrets Manager can't find the specified secret.");
     }
     this.secret = { SecretString: MOCK_SECRET_MANAGER_SECRET_STORE[SecretId] };
     return this;

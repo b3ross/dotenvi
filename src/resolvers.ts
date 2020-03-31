@@ -1,5 +1,4 @@
 import * as AWS from 'aws-sdk';
-import { CloudFormation } from 'aws-sdk';
 import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
 
 const Credstash = require('nodecredstash');
@@ -7,13 +6,14 @@ const Credstash = require('nodecredstash');
 import { promisify } from 'bluebird';
 
 import { ResolverMap, Config } from './types';
+import { accessNestedObject } from './utils';
 
 export const resolvers: ResolverMap = {
   cft: async (argument: string, config: Config) => {
     if (!AWS.config.region) {
       AWS.config.update({ region: config.awsRegion });
     }
-    const cft = new CloudFormation();
+    const cft = new AWS.CloudFormation();
     const parsedArgument = argument.split('.', 2);
     let stack: DescribeStacksOutput;
     try {
@@ -54,11 +54,11 @@ export const resolvers: ResolverMap = {
       return undefined;
     });
   },
-  aws: async (argument: string) => {
+  asm: async (argument: string) => {
     const params = argument.split('.');
-    const [secretKey, additonalValue] = params;
+    const [secretId, ...jsonMappings] = params;
 
-    if (!secretKey) {
+    if (!secretId) {
       console.warn('No key provided to aws secret manager resolver');
       return undefined;
     }
@@ -67,16 +67,16 @@ export const resolvers: ResolverMap = {
 
     try {
       const { SecretString } = await client
-        .getSecretValue({ SecretId: secretKey })
+        .getSecretValue({ SecretId: secretId })
         .promise();
 
-      if (additonalValue) {
+      if (jsonMappings.length) {
         const parseJson = JSON.parse(SecretString);
 
-        const lookupSecretValue = parseJson[additonalValue];
+        const lookupSecretValue = accessNestedObject(parseJson, jsonMappings);
 
         if (!lookupSecretValue) {
-          console.warn(`No aws secret manager value found for ${secretKey}.${additonalValue}`);
+          console.warn(`No aws secret manager value found for ${secretId}`);
           return undefined;
         }
 
@@ -85,7 +85,7 @@ export const resolvers: ResolverMap = {
 
       return SecretString;
     } catch (e) {
-      console.warn(`Invalid key passed to secret manager ${secretKey}`);
+      console.warn(e.message);
       return undefined;
     }
   }

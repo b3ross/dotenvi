@@ -45,3 +45,8 @@ export function loadConfig(): Config {
   config.resolvers = Object.assign({}, config.resolvers, resolvers);
   return config;
 }
+
+export function accessNestedObject(nestedObj: object, pathArr: string[]) {
+  return pathArr.reduce((obj: any, key) =>
+    (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+}
