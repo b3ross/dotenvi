@@ -5,6 +5,7 @@ export type ResolverMap = {
 
 export type Primitive = string | number | boolean;
 export type Document = { [name: string]: Primitive };
+export type GenericObject = { [key: string]: any };
 
 export class InputDocument {
   [name: string]: {

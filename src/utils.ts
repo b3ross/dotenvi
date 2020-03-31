@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { Document, InputDocument, Config } from './types';
+import { Document, InputDocument, Config, GenericObject } from './types';
 import { resolvers } from './resolvers';
 
 export function writeFile(document: Document, outputdir?: string) {
@@ -46,7 +46,7 @@ export function loadConfig(): Config {
   return config;
 }
 
-export function accessNestedObject(nestedObj: object, pathArr: string[]) {
-  return pathArr.reduce((obj: any, key) =>
-    (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+export function accessNestedObject(nestedObj: GenericObject, pathArr: string[]) {
+  return pathArr.reduce((obj: GenericObject, key: string) =>
+    obj && obj[key] ? obj[key] : undefined, nestedObj);
 }
