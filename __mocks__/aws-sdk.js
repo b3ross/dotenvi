@@ -1,6 +1,6 @@
 const MOCK_SECRET_MANAGER_SECRET_STORE = {
   singleString: 'foobar',
-  jsonString: JSON.stringify({ foo: 'bar' })
+  jsonString: JSON.stringify({ foo: 'bar', nested: { foo: 'bar' } })
 };
 
 class SecretsManagerMock {

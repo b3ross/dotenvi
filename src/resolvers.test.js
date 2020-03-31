@@ -1,41 +1,40 @@
 const { resolvers } = require('./resolvers');
 
-const awsSecretManagerResolver = resolvers.asm;
+const asmSecretManagerResolver = resolvers.asm;
 
-describe('AWS Resolver', () => {
-  let consoleOutput = [];
-  const mockedWarn = output => consoleOutput.push(output);
-  beforeEach(() => (console.warn = mockedWarn));
-
+describe('ASM Resolver', () => {
   it('returns json secret value', () => {
-    return awsSecretManagerResolver('jsonString.foo').then(output => {
+    return asmSecretManagerResolver('jsonString.foo').then(output => {
+      expect(output).toBe('bar');
+    });
+  });
+
+  it('returns nested json secret value', () => {
+    return asmSecretManagerResolver('jsonString.nested.foo').then(output => {
       expect(output).toBe('bar');
     });
   });
 
   it('returns single string secret value', () => {
-    return awsSecretManagerResolver('singleString').then(output => {
+    return asmSecretManagerResolver('singleString').then(output => {
       expect(output).toBe('foobar');
     });
   });
 
   it('returns undefined if single string invalid', () => {
-    return awsSecretManagerResolver('invalidSingleString').then(output => {
-      expect(consoleOutput).toMatchSnapshot();
+    return asmSecretManagerResolver('invalidSingleString').then(output => {
       expect(output).toBe(undefined);
     });
   });
 
   it('returns undefined if json string mapper invalid', () => {
-    return awsSecretManagerResolver('jsonString.invalid').then(output => {
-      expect(consoleOutput).toMatchSnapshot();
+    return asmSecretManagerResolver('jsonString.invalid').then(output => {
       expect(output).toBe(undefined);
     });
   });
 
   it('returns undefined if json key string invalid', () => {
-    return awsSecretManagerResolver('invalidJsonString.invalid').then(output => {
-      expect(consoleOutput).toMatchSnapshot();
+    return asmSecretManagerResolver('invalidJsonString.invalid').then(output => {
       expect(output).toBe(undefined);
     });
   });
