@@ -59,7 +59,7 @@ export const resolvers: ResolverMap = {
     const [secretId, ...jsonMappings] = params;
 
     if (!secretId) {
-      console.warn('No key provided to aws secret manager resolver');
+      console.warn('No id provided to aws secret manager resolver');
       return undefined;
     }
 
