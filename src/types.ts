@@ -5,6 +5,7 @@ export type ResolverMap = {
 
 export type Primitive = string | number | boolean;
 export type Document = { [name: string]: Primitive };
+export type GenericObject = { [key: string]: any };
 
 export class InputDocument {
   [name: string]: {
@@ -16,7 +17,7 @@ export class InputDocument {
 export class Config {
   constructor() {
     this.resolvers = {};
-    this.awsRegion = 'us-east-1';
+    this.awsRegion = process.env.AWS_REGION || 'us-east-1';
   }
   awsRegion: string;
   resolvers: ResolverMap;
