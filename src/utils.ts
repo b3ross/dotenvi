@@ -1,20 +1,24 @@
 import * as fs from 'fs';
-import * as path from 'path';
+import * as os from 'os';
 
-import { Document, InputDocument, Config, GenericObject } from './types';
+import { Document, InputDocument, Config, GenericObject, Format } from './types';
 import { resolvers } from './resolvers';
 
-export function writeFile(document: Document, outputdir?: string) {
+export function writeFile(document: Document, filename: string, format: Format) {
   let output = '';
-  const keys = Object.keys(document);
-  for (const key of keys) {
-    if (document[key] !== undefined) {
-      output += `${key}=${document[key]}\n`;
+  if (format == Format.Dotenv) {
+    const keys = Object.keys(document);
+    for (const key of keys) {
+      if (document[key] !== undefined) {
+        output += `${key}=${document[key]}\n`;
+      }
     }
   }
-  let filename = '.env';
-  if (outputdir) {
-    filename = path.join(outputdir, filename);
+  else if (format == Format.Json) {
+    output = JSON.stringify(document, undefined, 2) + os.EOL;
+  }
+  else {
+    throw new Error(`Invalid output format specified ${format}`);
   }
 
   fs.writeFileSync(filename, output);
@@ -49,4 +53,13 @@ export function loadConfig(): Config {
 export function accessNestedObject(nestedObj: GenericObject, pathArr: string[]) {
   return pathArr.reduce((obj: GenericObject, key: string) =>
     obj && obj[key] ? obj[key] : undefined, nestedObj);
+}
+
+export function parseFormat(format: string): Format {
+  if (format.toLowerCase() === "dotenv") {
+    return Format.Dotenv;
+  } else if (format.toLowerCase() === "json") {
+    return Format.Json;
+  }
+  throw new Error(`Invalid format specified ${format}`);
 }

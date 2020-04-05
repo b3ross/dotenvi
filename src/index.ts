@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
 import * as fs from 'fs';
+import * as path from 'path';
 import { ArgumentParser } from 'argparse';
 
 import { Rewriter } from './rewriter';
-import { ResolverMap, Document, InputDocument } from './types';
-import { resolvers } from './resolvers';
-import { writeFile, validateOutput, loadConfig } from './utils';
+import { InputDocument, Format } from './types';
+import { writeFile, validateOutput, loadConfig, parseFormat } from './utils';
 import { parse } from './inputParser';
 
 const parser = new ArgumentParser();
@@ -21,9 +21,15 @@ parser.addArgument(['-f', '--file'], {
 });
 
 parser.addArgument(['-o', '--output-dir'], {
-  help: 'Output directory of .env',
+  help: 'Output directory',
   dest: 'outputdir',
   defaultValue: process.cwd()
+});
+
+parser.addArgument(['-t', '--output-format'], {
+  help: 'Output format of file.  Options are json or dotenv',
+  dest: 'outputformat',
+  defaultValue: 'dotenv'
 });
 
 const args = parser.parseArgs();
@@ -38,6 +44,12 @@ try {
   process.exit(1);
 }
 
+const format = parseFormat(args.outputformat);
+const filename = path.join(
+  args.outputdir,
+  args.outputformat === "dotenv" ? '.env' : 'config.json');
+
+
 const rewriter = new Rewriter(config);
 rewriter
   .rewrite(document)
@@ -46,10 +58,10 @@ rewriter
     if (errors.length) {
       throw new Error(`Validation errors found in result:\n${errors.join('\n')}`);
     }
-    console.info(`Writing .env file to ${args.outputdir}/.env`);
-    writeFile(result, args.outputdir);
+    console.info(`Writing output file to ${filename}`);
+    writeFile(result, filename, format);
   })
   .catch((error: Error) => {
-    console.error(`Could not write .env file: ${error.stack}`);
+    console.error(`Could not write output file: ${error.stack}`);
     process.exit(1);
   });

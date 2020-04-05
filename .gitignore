@@ -35,6 +35,7 @@ dist
 .webpack
 .env
 coverage
+config.json
 
 # Temp dir
 tmp
