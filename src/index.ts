@@ -47,7 +47,7 @@ try {
 const format = parseFormat(args.outputformat);
 const filename = path.join(
   args.outputdir,
-  args.outputformat === "dotenv" ? '.env' : 'config.json');
+  args.outputformat === "dotenv" ? '.env' : 'dotenvi.json');
 
 
 const rewriter = new Rewriter(config);

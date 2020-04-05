@@ -6,7 +6,7 @@ import { resolvers } from './resolvers';
 
 export function writeFile(document: Document, filename: string, format: Format) {
   let output = '';
-  if (format == Format.Dotenv) {
+  if (format === 'dotenv') {
     const keys = Object.keys(document);
     for (const key of keys) {
       if (document[key] !== undefined) {
@@ -14,7 +14,7 @@ export function writeFile(document: Document, filename: string, format: Format) 
       }
     }
   }
-  else if (format == Format.Json) {
+  else if (format === 'json') {
     output = JSON.stringify(document, undefined, 2) + os.EOL;
   }
   else {
@@ -57,9 +57,9 @@ export function accessNestedObject(nestedObj: GenericObject, pathArr: string[]) 
 
 export function parseFormat(format: string): Format {
   if (format.toLowerCase() === "dotenv") {
-    return Format.Dotenv;
+    return 'dotenv';
   } else if (format.toLowerCase() === "json") {
-    return Format.Json;
+    return 'json';
   }
   throw new Error(`Invalid format specified ${format}`);
 }
