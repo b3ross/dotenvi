@@ -3,6 +3,7 @@ export type ResolverMap = {
   [name: string]: ResolverFunction;
 };
 
+export type Format = 'dotenv' | 'json';
 export type Primitive = string | number | boolean;
 export type Document = { [name: string]: Primitive };
 export type GenericObject = { [key: string]: any };

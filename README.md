@@ -49,16 +49,21 @@ Then, run `yarn dotenvi -s <stage>` to generate a `.env` file for the stage desi
 
 Note that stages are not required in your yaml file - you can also define it without stages, in which case you should not specify a stage with the `-s` option when you run `dotenvi`.
 
-
 ## Recursion
 
-Dotenvi now supports recursion.  You can specify an expression that returns another expression.  For example, if the following environment variables are defined:
+Dotenvi supports recursion.  You can specify an expression that returns another expression.  For example, if the following environment variables are defined:
 
 * `RECURSIVE_OUTER`: `${env:RECURSIVE_MIDDLE}-test`
 * `RECURSIVE_MIDDLE`: `foo${env:RECURSIVE_INNER}bar${env:RECURSIVE_INNER}`
 * `RECURSIVE_INNER`: `test`
 
 If you evaluate `${env:RECURSIVE_OUTER}`, it will return `footestbartest-test`.
+
+## Non-dotenv Output
+
+Dotenvi can also output result files in json.  This supported via the `-t` switch that allows specifying either json or dotenv (dotenv is the default).
+
+This supports a use case for people that are not interested in using .env, but still want the powerful lookup/replacement functionality that dotenvi supports.  The output file is named `dotenvi.json`.
 
 ## Configuration
 
@@ -91,7 +96,3 @@ The main design goals of dotenvi are as follows:
 I don't prescribe to the 12-factor application strategy that dotenv is based around, so please understand that this library may not completely follow that strategy.
 
 The reference syntax used in `env.yml` is inspired by [serverless](https://github.com/serverless/serverless).
-
-## Possible Future Work
-
-1. Allow for `dotenvi` to replace `dotenv`, if desired, by skipping the `.env`-generation step.
