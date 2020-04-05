@@ -63,7 +63,7 @@ If you evaluate `${env:RECURSIVE_OUTER}`, it will return `footestbartest-test`.
 
 Dotenvi can also output result files in json.  This supported via the `-t` switch that allows specifying either json or dotenv (dotenv is the default).
 
-This supports a use case for people that are not interested in using .env, but still want the powerful lookup/replacement functionality that dotenvi supports.
+This supports a use case for people that are not interested in using .env, but still want the powerful lookup/replacement functionality that dotenvi supports.  The output file is named `dotenvi.json`.
 
 ## Configuration
 
