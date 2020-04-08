@@ -16,10 +16,10 @@ export function parse(contents: string, stage?: string): InputDocument {
     const value = document[key];
     if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
       result[key] = { value: value };
-    } else if (value.optional && value.value) {
+    } else if (value.optional && typeof value.value !== 'undefined') {
       result[key] = {
         value: value.value,
-        optional: value.optional
+        optional: value.optional,
       };
     } else {
       throw new Error(`Parse error reading document.  Invalid value: ${JSON.stringify(value)}`);

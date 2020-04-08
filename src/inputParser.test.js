@@ -11,6 +11,16 @@ OPTIONAL:
     const parsed = parse(contents);
   });
 
+  it('Parses document with optional blank value', () => {
+    const contents = `
+CONSTANT: constant
+OPTIONAL:
+  value: ''
+  optional: true
+`;
+    const parsed = parse(contents);
+  });
+
   it('Parses valid document with stage', () => {
     const contents = `
 development:
