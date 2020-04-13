@@ -25,7 +25,7 @@ export class Rewriter {
           capture += c;
         } else if (c == '}') {
           capture += c;
-          const regex = new RegExp('\\${([a-z]+):(.*)}');
+          const regex = new RegExp('\\${([\\w]+):(.*)}');
           const matchResults = capture.match(regex);
           if (matchResults) {
             const resolverName = matchResults[1];

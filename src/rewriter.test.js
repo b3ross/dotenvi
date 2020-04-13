@@ -115,4 +115,19 @@ describe('Rewriter', () => {
       }
     });
   });
+
+  it('Handles full alphanumeric resolver', () => {
+    const document = {
+      test: {
+        value: '${1custom_Uppercaser:lowercase}'
+      }
+    };
+
+    const customUppercaser = async value => value.toUpperCase();
+
+    const rewriter = new Rewriter({ resolvers: { ...resolvers, '1custom_Uppercaser': customUppercaser } });
+    return rewriter.rewrite(document).then(output => {
+      expect(output['test']).toBe('LOWERCASE');
+    });
+  });
 });
