@@ -1,7 +1,7 @@
 import * as AWS from 'aws-sdk';
 import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
 
-const Credstash = require('nodecredstash');
+const Credstash = require('aws-credstash');
 
 import { promisify } from 'bluebird';
 
