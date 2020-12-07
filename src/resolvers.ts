@@ -1,5 +1,6 @@
 import * as AWS from 'aws-sdk';
 import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
+import CloudFormation = require('aws-sdk/clients/cloudformation');
 
 const Credstash = require('aws-credstash');
 
@@ -8,28 +9,37 @@ import { promisify } from 'bluebird';
 import { ResolverMap, Config } from './types';
 import { accessNestedObject } from './utils';
 
+const stackCache: Map<string, any> = new Map();
+
 export const resolvers: ResolverMap = {
   cft: async (argument: string, config: Config) => {
-    if (!AWS.config.region) {
-      AWS.config.update({ region: config.awsRegion });
-    }
-    const cft = new AWS.CloudFormation();
     const parsedArgument = argument.split('.', 2);
-    let stack: DescribeStacksOutput;
-    try {
-      stack = await cft.describeStacks({ StackName: parsedArgument[0] }).promise();
-    } catch (e) {
-      console.warn(
-        `Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`
-      );
-      return undefined;
-    }
-    if (stack.Stacks.length == 0) {
-      console.warn(`Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
-      return undefined;
+
+    let stack: CloudFormation.Stack = stackCache.get(parsedArgument[0]);
+
+    if (!stack) {
+      if (!AWS.config.region) {
+        AWS.config.update({ region: config.awsRegion });
+      }
+      const cft = new AWS.CloudFormation();
+      let describeStack: DescribeStacksOutput;
+      try {
+        describeStack = await cft.describeStacks({ StackName: parsedArgument[0] }).promise();
+      } catch (e) {
+        console.warn(
+          `Could not get info for stack with name ${parsedArgument[0]} when parsing cft reference ${argument}: ${e}`
+        );
+        return undefined;
+      }
+      if (describeStack.Stacks.length == 0) {
+        console.warn(`Could not locate stack with name ${parsedArgument[0]} when parsing cft reference ${argument}`);
+        return undefined;
+      }
+      stack = describeStack.Stacks[0];
+      stackCache.set(parsedArgument[0], stack);
     }
 
-    for (const output of stack.Stacks[0].Outputs) {
+    for (const output of stack.Outputs) {
       if (output.OutputKey === parsedArgument[1]) {
         return output.OutputValue;
       }
@@ -66,9 +76,7 @@ export const resolvers: ResolverMap = {
     const client = new AWS.SecretsManager();
 
     try {
-      const { SecretString } = await client
-        .getSecretValue({ SecretId: secretId })
-        .promise();
+      const { SecretString } = await client.getSecretValue({ SecretId: secretId }).promise();
 
       if (jsonMappings.length) {
         const parseJson = JSON.parse(SecretString);
