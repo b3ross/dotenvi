@@ -3,6 +3,9 @@ const MOCK_SECRET_MANAGER_SECRET_STORE = {
   jsonString: JSON.stringify({ foo: 'bar', nested: { foo: 'bar' } })
 };
 
+// Mock the AWS config object
+const config = { region: 'us-east-1' };
+
 class SecretsManagerMock {
   constructor() {
     this.secret = {};
@@ -21,6 +24,57 @@ class SecretsManagerMock {
   }
 }
 
+class CloudFormationMock {
+  constructor() {
+    this.stacks = {};
+    this.timesCalled = 0;
+  }
+
+  describeStacks({ StackName }) {
+    this.timesCalled += 1;
+    if (StackName == 'throwError') {
+      throw 'CloudFormation Error';
+    } else if (StackName == 'notFound') {
+      this.stacks = {
+        Stacks: []
+      };
+    } else if (StackName == 'outputMissing') {
+      this.stacks = {
+        Stacks: [
+          {
+            Outputs: [
+              {
+                OutputKey: 'notFoo',
+                OutputValue: 'bar'
+              }
+            ]
+          }
+        ]
+      };
+    } else {
+      this.stacks = {
+        Stacks: [
+          {
+            Outputs: [
+              {
+                OutputKey: 'foo',
+                OutputValue: 'bar'
+              }
+            ]
+          }
+        ]
+      };
+    }
+    return this;
+  }
+
+  promise() {
+    return Promise.resolve(this.stacks);
+  }
+}
+
 module.exports = {
-  SecretsManager: SecretsManagerMock
+  SecretsManager: SecretsManagerMock,
+  CloudFormation: CloudFormationMock,
+  config
 };

@@ -1,6 +1,5 @@
 import * as AWS from 'aws-sdk';
-import { DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
-import CloudFormation = require('aws-sdk/clients/cloudformation');
+import { Stack, DescribeStacksOutput } from 'aws-sdk/clients/cloudformation';
 
 const Credstash = require('aws-credstash');
 
@@ -11,17 +10,20 @@ import { accessNestedObject } from './utils';
 
 const stackCache: Map<string, any> = new Map();
 
+// Single shared instantiation of aws-sdk clients - exported for test access
+export const cft = new AWS.CloudFormation();
+export const asm = new AWS.SecretsManager();
+
 export const resolvers: ResolverMap = {
   cft: async (argument: string, config: Config) => {
     const parsedArgument = argument.split('.', 2);
 
-    let stack: CloudFormation.Stack = stackCache.get(parsedArgument[0]);
+    let stack: Stack = stackCache.get(parsedArgument[0]);
 
     if (!stack) {
       if (!AWS.config.region) {
         AWS.config.update({ region: config.awsRegion });
       }
-      const cft = new AWS.CloudFormation();
       let describeStack: DescribeStacksOutput;
       try {
         describeStack = await cft.describeStacks({ StackName: parsedArgument[0] }).promise();
@@ -73,10 +75,8 @@ export const resolvers: ResolverMap = {
       return undefined;
     }
 
-    const client = new AWS.SecretsManager();
-
     try {
-      const { SecretString } = await client.getSecretValue({ SecretId: secretId }).promise();
+      const { SecretString } = await asm.getSecretValue({ SecretId: secretId }).promise();
 
       if (jsonMappings.length) {
         const parseJson = JSON.parse(SecretString);
