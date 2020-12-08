@@ -33,7 +33,7 @@ class CloudFormationMock {
   describeStacks({ StackName }) {
     this.timesCalled += 1;
     if (StackName == 'throwError') {
-      throw 'CloudFormation Error';
+      throw new Error('CloudFormation Error');
     } else if (StackName == 'notFound') {
       this.stacks = {
         Stacks: []
